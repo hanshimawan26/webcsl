@@ -6,6 +6,7 @@ from sqlalchemy import func
 #from werkzeug.datastructures import FileStorage
 #from werkzeug.utils import secure_filename
 import os
+import random
 #from waitress import serve
 
 app = Flask(__name__)
@@ -121,13 +122,13 @@ def kodepeserta(id, inisial):
     if id<100:
         if id<10:
             kodenomor="CSL"+"-"+inisial+"-"+"00"+str(id)
-            return(kodenomor)
+            return(kodenomor.join(random.choices(string.ascii_uppercase + string.digits, k=4)))
         else:
             kodenomor="CSL"+"-"+inisial+"-"+"0"+str(id)
-            return(kodenomor)
+            return(kodenomor.join(random.choices(string.ascii_uppercase + string.digits, k=4)))
     else:
         kodenomor="CSL"+"-"+inisial+"-"+str(id)
-        return(kodenomor)
+        return(kodenomor.join(random.choices(string.ascii_uppercase + string.digits, k=4)))
 
 def kodeunik(id):
     if id>800:
