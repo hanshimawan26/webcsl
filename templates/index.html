@@ -53,78 +53,105 @@
           <span>Cabang Lomba yang Ingin Diikuti?</span>
           <br>
           {% if sisacatur != 0 %}
-          <input type="radio" name="cabang" id="chess" value="chess" required>
+          <input type="radio" name="cabang" id="chess" value="chess" onclick="cslOptions('chess');">
           <label for="chess">Chess League</label>
           <br>
           {% endif %}
           {% if sisafilm != 0 %}
-          <input type="radio" name="cabang" id="film" value="film">
+          <input type="radio" name="cabang" id="film" value="film" onclick="cslOptions('film');">
           <label for="film">Film Pendek</label>
           <br>
           {% endif %}
           {% if sisabasketputra != 0 %}
-          <input type="radio" name="cabang" id="basketputra" value="basketputra">
+          <input type="radio" name="cabang" id="basketputra" value="basketputra" onclick="cslOptions('basketputra');">
           <label for="basketputra">Basket Skills Putra</label>
           <br>
           {% endif %}
           {% if sisabasketputri != 0 %}
-          <input type="radio" name="cabang" id="basketputri" value="basketputri">
+          <input type="radio" name="cabang" id="basketputri" value="basketputri" onclick="cslOptions('basketputri');">
           <label for="basketputri">Basket Skills Putri</label>
           <br>
           {% endif %}
           {% if sisaband != 0 %}
-          <input type="radio" name="cabang" id="band" value="band">
+          <input type="radio" name="cabang" id="band" value="band" onclick="cslOptions('band');">
           <label for="band">Band</label>
           <br>
           {% endif %}
           {% if sisadance != 0 %}
-          <input type="radio" name="cabang" id="dance" value="dance">
+          <input type="radio" name="cabang" id="dance" value="dance" onclick="cslOptions('dance');">
           <label for="dance">Modern Dance</label>
           <br>
           {% endif %}
           {% if sisafoto != 0 %}
-          <input type="radio" name="cabang" id="foto" value="foto">
+          <input type="radio" name="cabang" id="foto" value="foto" onclick="cslOptions('foto');">
           <label for="foto">Fotografi</label>
           <br>
           {% endif %}
           {% if sisadebat != 0 %}
-          <input type="radio" name="cabang" id="debat" value="debat">
+          <input type="radio" name="cabang" id="debat" value="debat" onclick="cslOptions('debat');">
           <label for="debat">English Debate</label>
           <br>
           {% endif %}
           {% if sisapidato != 0 %}
-          <input type="radio" name="cabang" id="pidato" value="pidato">
+          <input type="radio" name="cabang" id="pidato" value="pidato" onclick="cslOptions('pidato');">
           <label for="pidato">Pidato</label>
           <br>
           {% endif %}
           {% if sisakosong != 0 %}
-          <input type="radio" name="cabang" id="kosong" value="kosong">
+          <input type="radio" name="cabang" id="kosong" value="kosong" onclick="cslOptions('kosong');">
           <label for="kosong">Pencak Silat Putra Seni Tunggal Tangan Kosong</label>
           <br>
           {% endif %}
           {% if sisasenjata != 0 %}
-          <input type="radio" name="cabang" id="bersenjata" value="senjata">
+          <input type="radio" name="cabang" id="bersenjata" value="senjata" onclick="cslOptions('senjata');">
           <label for="senjata">Pencak Silat Putra Seni Tunggal Bersenjata</label>
           <br>
           {% endif %}
           {% if sisaganda != 0 %}
-          <input type="radio" name="cabang" id="ganda" value="ganda">
+          <input type="radio" name="cabang" id="ganda" value="ganda" onclick="cslOptions('ganda');">
           <label for="ganda">Pencak Silat Putra Seni Ganda Tangan Kosong</label>
           <br>
           {% endif %}
           {% if sisapadus != 0 %}
-          <input type="radio" name="cabang" id="padus" value="padus">
+          <input type="radio" name="cabang" id="padus" value="padus" onclick="cslOptions('padus');">
           <label for="padus">Paduan Suara</label>
           <br>
           {% endif %}
           {% if sisadesign != 0 %}
-          <input type="radio" name="cabang" id="design" value="design">
+          <input type="radio" name="cabang" id="design" value="design" onclick="cslOptions('design');">
           <label for="design">Lomba Seaside Design</label>
           <br>
           {% endif %}
         </section>
         <hr>
+        <script>
+          const values = {"chess": 1, "film": 12, "basketputra": 1, "basketputri": 1, "band": 10, "dance": 7, "foto": 1, "debat": 3, "pidato": 1, "kosong": 1, "senjata": 1, "ganda": 2, "padus": 20, "design": 5};
+          // 11pm late-night javascript wkwk
+          var bosen;
+          function hideElement(id){
+            document.getElementById(id).style.display = 'none'; // hide element
+          }
 
+          function showElement(id){
+            document.getElementById(id).style.display = ''; // i prefer '' instead of 'block'
+          }
+
+          function cslOptions(lomba){
+            for(let i=1; i<=values[lomba]; i++) {
+              showElement("section-nama"+i.toString());
+              showElement("section-telepon"+i.toString());
+              showElement("section-email"+i.toString());
+              showElement("section-lahir"+i.toString());
+            }
+
+            for(let i=values[lomba]+1; i<=20; i++) {
+              hideElement("section-nama"+i.toString());
+              hideElement("section-telepon"+i.toString());
+              hideElement("section-email"+i.toString());
+              hideElement("section-lahir"+i.toString());
+            }
+          }
+        </script>
         <section class="surat" id="section-surat">
           <label for="surat">Folder Drive Sesuai SOP Pendaftaran (Pastikan Setting Accessnya : Anyone in the Internet Can View)</label>
           <br>
