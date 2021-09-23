@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <title>Pendaftaran - Canisius Super League</title>
+    <title>Canisius Super League</title>
+  </head>
+
+  <body>
+    <div class=header>
+      <img width:100% src="{{url_for('static', filename='Artboard 1.png')}}" alt="Logo Canisius Super League" id="logo">
+      <h1 id="judul">Pendaftaran Canisius Super League</h1>
+      <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+        <ul id="menu">
+          <li><a href="#sekolah">Sekolah</a></li>
+          <li><a href="#nama1">Peserta 1</a></li>
+          <li><a href="#nama2">Peserta 2</a></li>
+          <li><a href="#nama2">Peserta 3</a></li>
+          <li><a href="#nama4">Peserta 4</a></li>
+          <li><a href="#nama5">Peserta 5</a></li>
+          <li><a href="#nama10">Peserta 10</a></li>
+          <li><a href="#nama15">Peserta 15</a></li>
+          <li><a href="#submit">Submit</a></li>
+        </ul>
+        </div>
+    </nav>
+    </div>
+    
+    <section id="overlay">
+
+      <form action="/" method="POST" enctype="multipart/form-data">
+        <section class="sekolah">
+          <label for="sekolah">Sekolah</label>
+          <br>
+          <input type="text" name="sekolah" id="sekolah" required>
+        </section>
+        <hr>
+
+        <section class="cabang">
+          <span>Cabang Lomba yang Ingin Diikuti?</span>
+          <br>
+          <input type="radio" name="cabang" id="chess" value="chess">
+          <label for="chess">Chess League</label>
+          <br>
+          <input type="radio" name="cabang" id="film" value="film">
+          <label for="film">Film Pendek</label>
+          <br>
+          <input type="radio" name="cabang" id="basketputra" value="basketputra">
+          <label for="basketputra">Basket Skills Putra</label>
+          <br>
+          <input type="radio" name="cabang" id="basketputri" value="basketputri">
+          <label for="basketputri">Basket Skills Putri</label>
+          <br>
+          <input type="radio" name="cabang" id="band" value="band">
+          <label for="band">Band</label>
+          <br>
+          <input type="radio" name="cabang" id="dance" value="dance">
+          <label for="dance">Modern Dance</label>
+          <br>
+          <input type="radio" name="cabang" id="foto" value="foto">
+          <label for="foto">Fotografi</label>
+          <br>
+          <input type="radio" name="cabang" id="debat" value="debat">
+          <label for="debat">English Debate</label>
+          <br>
+          <input type="radio" name="cabang" id="pidato" value="pidato">
+          <label for="pidato">Pidato</label>
+          <br>
+          <input type="radio" name="cabang" id="kosong" value="kosong">
+          <label for="kosong">Pencak Silat Putra Seni Tunggal Tangan Kosong</label>
+          <br>
+          <input type="radio" name="cabang" id="bersenjata" value="senjata">
+          <label for="senjata">Pencak Silat Putra Seni Tunggal Bersenjata</label>
+          <br>
+          <input type="radio" name="cabang" id="ganda" value="ganda">
+          <label for="ganda">Pencak Silat Putra Seni Ganda Tangan Kosong</label>
+          <br>
+          <input type="radio" name="cabang" id="padus" value="padus">
+          <label for="padus">Paduan Suara</label>
+          <br>
+          <input type="radio" name="cabang" id="design" value="design">
+          <label for="design">Lomba Seaside Design</label>
+          <br>
+
+        </section>
+        <hr>
+
+        <section class="surat">
+          <label for="surat">Surat Keterangan (dalam bentuk PDF)</label>
+          <br>
+          <input type="file" name="surat" id="surat" accept=".pdf" required>
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama1">
+          <label for="nama1">Nama Peserta 1</label>
+          <br>
+          <input type="text" name="nama_1" id="nama1" required>
+        </section>
+        <hr>
+        <section class="telpon1">
+        <label for="telpon1">Nomor Telepon (pakai 62..., contoh 6281012345678)</label>
+        <br>
+        <input type="text" name="telpon_1" id="telpon1" required>
+        </section>
+        <hr>
+
+        <section class="email1">
+        <label for="email1">Email</label>
+        <br>
+        <input type="email" name="email_1" id="email1" required>
+        </section>
+        <hr>
+
+        <section class="lahir1">
+        <label for="lahir1">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_1" id="lahir1" required>
+        </section>
+        <hr>
+
+        <section class="foto1">
+        <label for="pasfoto1">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_1" id="pasfoto1" accept="image/*,.pdf" required>
+        </section>
+        <hr>
+        <section class="buktitf1">
+          <label for="bukti1">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer1" id="bukti1" accept="image/*,.pdf" required>
+        </section>
+        <hr>
+
+
+        <hr>
+        <section class="nama2">
+          <label for="nama2">Nama Peserta 2</label>
+          <br>
+          <input type="text" name="nama_2" id="nama2" >
+        </section>
+        <hr>
+        <section class="telpon2">
+        <label for="telpon2">Nomor Telepon (pakai 62..., contoh 6282022345678)</label>
+        <br>
+        <input type="text" name="telpon_2" id="telpon2" >
+        </section>
+        <hr>
+
+        <section class="email2">
+        <label for="email2">Email</label>
+        <br>
+        <input type="email" name="email_2" id="email2" >
+        </section>
+        <hr>
+
+        <section class="lahir2">
+        <label for="lahir2">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_2" id="lahir2" >
+        </section>
+        <hr>
+
+        <section class="foto2">
+        <label for="pasfoto2">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_2" id="pasfoto2" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf2">
+          <label for="bukti2">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer2" id="bukti2" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama3">
+          <label for="nama3">Nama Peserta 3</label>
+          <br>
+          <input type="text" name="nama_3" id="nama3" >
+        </section>
+        <hr>
+        <section class="telpon3">
+        <label for="telpon3">Nomor Telepon (pakai 62..., contoh 6283032345678)</label>
+        <br>
+        <input type="text" name="telpon_3" id="telpon3" >
+        </section>
+        <hr>
+
+        <section class="email3">
+        <label for="email3">Email</label>
+        <br>
+        <input type="email" name="email_3" id="email3" >
+        </section>
+        <hr>
+
+        <section class="lahir3">
+        <label for="lahir3">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_3" id="lahir3" >
+        </section>
+        <hr>
+
+        <section class="foto3">
+        <label for="pasfoto3">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_3" id="pasfoto3" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf3">
+          <label for="bukti3">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer3" id="bukti3" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama4">
+          <label for="nama4">Nama Peserta 4</label>
+          <br>
+          <input type="text" name="nama_4" id="nama4" >
+        </section>
+        <hr>
+        <section class="telpon4">
+        <label for="telpon4">Nomor Telepon (pakai 62..., contoh 6284042345678)</label>
+        <br>
+        <input type="text" name="telpon_4" id="telpon4" >
+        </section>
+        <hr>
+
+        <section class="email4">
+        <label for="email4">Email</label>
+        <br>
+        <input type="email" name="email_4" id="email4" >
+        </section>
+        <hr>
+
+        <section class="lahir4">
+        <label for="lahir4">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_4" id="lahir4" >
+        </section>
+        <hr>
+
+        <section class="foto4">
+        <label for="pasfoto4">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_4" id="pasfoto4" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf4">
+          <label for="bukti4">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer4" id="bukti4" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama5">
+          <label for="nama5">Nama Peserta 5</label>
+          <br>
+          <input type="text" name="nama_5" id="nama5" >
+        </section>
+        <hr>
+        <section class="telpon5">
+        <label for="telpon5">Nomor Telepon (pakai 62..., contoh 6285052345678)</label>
+        <br>
+        <input type="text" name="telpon_5" id="telpon5" >
+        </section>
+        <hr>
+
+        <section class="email5">
+        <label for="email5">Email</label>
+        <br>
+        <input type="email" name="email_5" id="email5" >
+        </section>
+        <hr>
+
+        <section class="lahir5">
+        <label for="lahir5">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_5" id="lahir5" >
+        </section>
+        <hr>
+
+        <section class="foto5">
+        <label for="pasfoto5">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_5" id="pasfoto5" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf5">
+          <label for="bukti5">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer5" id="bukti5" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama6">
+          <label for="nama6">Nama Peserta 6</label>
+          <br>
+          <input type="text" name="nama_6" id="nama6" >
+        </section>
+        <hr>
+        <section class="telpon6">
+        <label for="telpon6">Nomor Telepon (pakai 62..., contoh 6286062345678)</label>
+        <br>
+        <input type="text" name="telpon_6" id="telpon6" >
+        </section>
+        <hr>
+
+        <section class="email6">
+        <label for="email6">Email</label>
+        <br>
+        <input type="email" name="email_6" id="email6" >
+        </section>
+        <hr>
+
+        <section class="lahir6">
+        <label for="lahir6">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_6" id="lahir6" >
+        </section>
+        <hr>
+
+        <section class="foto6">
+        <label for="pasfoto6">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_6" id="pasfoto6" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf6">
+          <label for="bukti6">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer6" id="bukti6" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama7">
+          <label for="nama7">Nama Peserta 7</label>
+          <br>
+          <input type="text" name="nama_7" id="nama7" >
+        </section>
+        <hr>
+        <section class="telpon7">
+        <label for="telpon7">Nomor Telepon (pakai 62..., contoh 6287072345678)</label>
+        <br>
+        <input type="text" name="telpon_7" id="telpon7" >
+        </section>
+        <hr>
+
+        <section class="email7">
+        <label for="email7">Email</label>
+        <br>
+        <input type="email" name="email_7" id="email7" >
+        </section>
+        <hr>
+
+        <section class="lahir7">
+        <label for="lahir7">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_7" id="lahir7" >
+        </section>
+        <hr>
+
+        <section class="foto7">
+        <label for="pasfoto7">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_7" id="pasfoto7" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf7">
+          <label for="bukti7">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer7" id="bukti7" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama8">
+          <label for="nama8">Nama Peserta 8</label>
+          <br>
+          <input type="text" name="nama_8" id="nama8" >
+        </section>
+        <hr>
+        <section class="telpon8">
+        <label for="telpon8">Nomor Telepon (pakai 62..., contoh 6288082345678)</label>
+        <br>
+        <input type="text" name="telpon_8" id="telpon8" >
+        </section>
+        <hr>
+
+        <section class="email8">
+        <label for="email8">Email</label>
+        <br>
+        <input type="email" name="email_8" id="email8" >
+        </section>
+        <hr>
+
+        <section class="lahir8">
+        <label for="lahir8">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_8" id="lahir8" >
+        </section>
+        <hr>
+
+        <section class="foto8">
+        <label for="pasfoto8">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_8" id="pasfoto8" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf8">
+          <label for="bukti8">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer8" id="bukti8" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama9">
+          <label for="nama9">Nama Peserta 9</label>
+          <br>
+          <input type="text" name="nama_9" id="nama9" >
+        </section>
+        <hr>
+        <section class="telpon9">
+        <label for="telpon9">Nomor Telepon (pakai 62..., contoh 6289092345678)</label>
+        <br>
+        <input type="text" name="telpon_9" id="telpon9" >
+        </section>
+        <hr>
+
+        <section class="email9">
+        <label for="email9">Email</label>
+        <br>
+        <input type="email" name="email_9" id="email9" >
+        </section>
+        <hr>
+
+        <section class="lahir9">
+        <label for="lahir9">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_9" id="lahir9" >
+        </section>
+        <hr>
+
+        <section class="foto9">
+        <label for="pasfoto9">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_9" id="pasfoto9" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf9">
+          <label for="bukti9">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer9" id="bukti9" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama10">
+          <label for="nama10">Nama Peserta 10</label>
+          <br>
+          <input type="text" name="nama_10" id="nama10" >
+        </section>
+        <hr>
+        <section class="telpon10">
+        <label for="telpon10">Nomor Telepon (pakai 62..., contoh 628100102345678)</label>
+        <br>
+        <input type="text" name="telpon_10" id="telpon10" >
+        </section>
+        <hr>
+
+        <section class="email10">
+        <label for="email10">Email</label>
+        <br>
+        <input type="email" name="email_10" id="email10" >
+        </section>
+        <hr>
+
+        <section class="lahir10">
+        <label for="lahir10">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_10" id="lahir10" >
+        </section>
+        <hr>
+
+        <section class="foto10">
+        <label for="pasfoto10">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_10" id="pasfoto10" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf10">
+          <label for="bukti10">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer10" id="bukti10" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama11">
+          <label for="nama11">Nama Peserta 11</label>
+          <br>
+          <input type="text" name="nama_11" id="nama11" >
+        </section>
+        <hr>
+        <section class="telpon11">
+        <label for="telpon11">Nomor Telepon (pakai 62..., contoh 628110112345678)</label>
+        <br>
+        <input type="text" name="telpon_11" id="telpon11" >
+        </section>
+        <hr>
+
+        <section class="email11">
+        <label for="email11">Email</label>
+        <br>
+        <input type="email" name="email_11" id="email11" >
+        </section>
+        <hr>
+
+        <section class="lahir11">
+        <label for="lahir11">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_11" id="lahir11" >
+        </section>
+        <hr>
+
+        <section class="foto11">
+        <label for="pasfoto11">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_11" id="pasfoto11" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf11">
+          <label for="bukti11">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer11" id="bukti11" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama12">
+          <label for="nama12">Nama Peserta 12</label>
+          <br>
+          <input type="text" name="nama_12" id="nama12" >
+        </section>
+        <hr>
+        <section class="telpon12">
+        <label for="telpon12">Nomor Telepon (pakai 62..., contoh 628120122345678)</label>
+        <br>
+        <input type="text" name="telpon_12" id="telpon12" >
+        </section>
+        <hr>
+
+        <section class="email12">
+        <label for="email12">Email</label>
+        <br>
+        <input type="email" name="email_12" id="email12" >
+        </section>
+        <hr>
+
+        <section class="lahir12">
+        <label for="lahir12">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_12" id="lahir12" >
+        </section>
+        <hr>
+
+        <section class="foto12">
+        <label for="pasfoto12">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_12" id="pasfoto12" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf12">
+          <label for="bukti12">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer12" id="bukti12" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama13">
+          <label for="nama13">Nama Peserta 13</label>
+          <br>
+          <input type="text" name="nama_13" id="nama13" >
+        </section>
+        <hr>
+        <section class="telpon13">
+        <label for="telpon13">Nomor Telepon (pakai 62..., contoh 628130132345678)</label>
+        <br>
+        <input type="text" name="telpon_13" id="telpon13" >
+        </section>
+        <hr>
+
+        <section class="email13">
+        <label for="email13">Email</label>
+        <br>
+        <input type="email" name="email_13" id="email13" >
+        </section>
+        <hr>
+
+        <section class="lahir13">
+        <label for="lahir13">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_13" id="lahir13" >
+        </section>
+        <hr>
+
+        <section class="foto13">
+        <label for="pasfoto13">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_13" id="pasfoto13" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf13">
+          <label for="bukti13">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer13" id="bukti13" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama14">
+          <label for="nama14">Nama Peserta 14</label>
+          <br>
+          <input type="text" name="nama_14" id="nama14" >
+        </section>
+        <hr>
+        <section class="telpon14">
+        <label for="telpon14">Nomor Telepon (pakai 62..., contoh 628140142345678)</label>
+        <br>
+        <input type="text" name="telpon_14" id="telpon14" >
+        </section>
+        <hr>
+
+        <section class="email14">
+        <label for="email14">Email</label>
+        <br>
+        <input type="email" name="email_14" id="email14" >
+        </section>
+        <hr>
+
+        <section class="lahir14">
+        <label for="lahir14">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_14" id="lahir14" >
+        </section>
+        <hr>
+
+        <section class="foto14">
+        <label for="pasfoto14">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_14" id="pasfoto14" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf14">
+          <label for="bukti14">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer14" id="bukti14" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama15">
+          <label for="nama15">Nama Peserta 15</label>
+          <br>
+          <input type="text" name="nama_15" id="nama15" >
+        </section>
+        <hr>
+        <section class="telpon15">
+        <label for="telpon15">Nomor Telepon (pakai 62..., contoh 628150152345678)</label>
+        <br>
+        <input type="text" name="telpon_15" id="telpon15" >
+        </section>
+        <hr>
+
+        <section class="email15">
+        <label for="email15">Email</label>
+        <br>
+        <input type="email" name="email_15" id="email15" >
+        </section>
+        <hr>
+
+        <section class="lahir15">
+        <label for="lahir15">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_15" id="lahir15" >
+        </section>
+        <hr>
+
+        <section class="foto15">
+        <label for="pasfoto15">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_15" id="pasfoto15" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf15">
+          <label for="bukti15">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer15" id="bukti15" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama16">
+          <label for="nama16">Nama Peserta 16</label>
+          <br>
+          <input type="text" name="nama_16" id="nama16" >
+        </section>
+        <hr>
+        <section class="telpon16">
+        <label for="telpon16">Nomor Telepon (pakai 62..., contoh 628160162345678)</label>
+        <br>
+        <input type="text" name="telpon_16" id="telpon16" >
+        </section>
+        <hr>
+
+        <section class="email16">
+        <label for="email16">Email</label>
+        <br>
+        <input type="email" name="email_16" id="email16" >
+        </section>
+        <hr>
+
+        <section class="lahir16">
+        <label for="lahir16">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_16" id="lahir16" >
+        </section>
+        <hr>
+
+        <section class="foto16">
+        <label for="pasfoto16">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_16" id="pasfoto16" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf16">
+          <label for="bukti16">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer16" id="bukti16" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama17">
+          <label for="nama17">Nama Peserta 17</label>
+          <br>
+          <input type="text" name="nama_17" id="nama17" >
+        </section>
+        <hr>
+        <section class="telpon17">
+        <label for="telpon17">Nomor Telepon (pakai 62..., contoh 628170172345678)</label>
+        <br>
+        <input type="text" name="telpon_17" id="telpon17" >
+        </section>
+        <hr>
+
+        <section class="email17">
+        <label for="email17">Email</label>
+        <br>
+        <input type="email" name="email_17" id="email17" >
+        </section>
+        <hr>
+
+        <section class="lahir17">
+        <label for="lahir17">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_17" id="lahir17" >
+        </section>
+        <hr>
+
+        <section class="foto17">
+        <label for="pasfoto17">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_17" id="pasfoto17" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf17">
+          <label for="bukti17">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer17" id="bukti17" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama18">
+          <label for="nama18">Nama Peserta 18</label>
+          <br>
+          <input type="text" name="nama_18" id="nama18" >
+        </section>
+        <hr>
+        <section class="telpon18">
+        <label for="telpon18">Nomor Telepon (pakai 62..., contoh 628180182345678)</label>
+        <br>
+        <input type="text" name="telpon_18" id="telpon18" >
+        </section>
+        <hr>
+
+        <section class="email18">
+        <label for="email18">Email</label>
+        <br>
+        <input type="email" name="email_18" id="email18" >
+        </section>
+        <hr>
+
+        <section class="lahir18">
+        <label for="lahir18">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_18" id="lahir18" >
+        </section>
+        <hr>
+
+        <section class="foto18">
+        <label for="pasfoto18">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_18" id="pasfoto18" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf18">
+          <label for="bukti18">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer18" id="bukti18" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama19">
+          <label for="nama19">Nama Peserta 19</label>
+          <br>
+          <input type="text" name="nama_19" id="nama19" >
+        </section>
+        <hr>
+        <section class="telpon19">
+        <label for="telpon19">Nomor Telepon (pakai 62..., contoh 628190192345678)</label>
+        <br>
+        <input type="text" name="telpon_19" id="telpon19" >
+        </section>
+        <hr>
+
+        <section class="email19">
+        <label for="email19">Email</label>
+        <br>
+        <input type="email" name="email_19" id="email19" >
+        </section>
+        <hr>
+
+        <section class="lahir19">
+        <label for="lahir19">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_19" id="lahir19" >
+        </section>
+        <hr>
+
+        <section class="foto19">
+        <label for="pasfoto19">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_19" id="pasfoto19" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf19">
+          <label for="bukti19">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer19" id="bukti19" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <hr>
+        <section class="nama20">
+          <label for="nama20">Nama Peserta 20</label>
+          <br>
+          <input type="text" name="nama_20" id="nama20" >
+        </section>
+        <hr>
+        <section class="telpon20">
+        <label for="telpon20">Nomor Telepon (pakai 62..., contoh 628200202345678)</label>
+        <br>
+        <input type="text" name="telpon_20" id="telpon20" >
+        </section>
+        <hr>
+
+        <section class="email20">
+        <label for="email20">Email</label>
+        <br>
+        <input type="email" name="email_20" id="email20" >
+        </section>
+        <hr>
+
+        <section class="lahir20">
+        <label for="lahir20">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_20" id="lahir20" >
+        </section>
+        <hr>
+
+        <section class="foto20">
+        <label for="pasfoto20">Pas Foto 3*4 (PDF/JPG/PNG) </label>
+        <br>
+        <input type="file" name="pasfoto_20" id="pasfoto20" accept="image/*,.pdf" >
+        </section>
+        <hr>
+        <section class="buktitf20">
+          <label for="bukti20">Bukti Transfer (PDF/JPG/PNG) </label>
+          <br>
+          <input type="file" name="buktitransfer20" id="bukti20" accept="image/*,.pdf" >
+        </section>
+        <hr>
+
+        <section class="submission">
+        <input type="submit" id="submit" name = "submit" value="Submit">
+      </section>
+      </form>
+    </section>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

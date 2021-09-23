@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <title>Pendaftaran - Canisius Super League</title>
+    <title>Canisius Super League</title>
+  </head>
+
+  <body>
+    <div class=header>
+      <img width:100% src="{{url_for('static', filename='Artboard 1.png')}}" alt="Logo Canisius Super League" id="logo">
+      <hr>
+    </div>
+    <section id="overlay">
+        <form action="/submitted" method="POST">
+        <h1>Pendaftaran Canisius Super League</h1>
+      <hr>
+      <section class="nama">
+        <label for="nama">Nama Peserta 1</label>
+        <br>
+        <input type="text" name="nama_1" id="nama" required>
+      </section>
+      <hr>
+      <section class="telpon">
+      <label for="telpon">Nomor Telepon (pakai 62..., contoh 6281012345678)</label>
+      <br>
+      <input type="text" name="telpon_1" id="telpon" required>
+      </section>
+      <hr>
+
+      <section class="email">
+      <label for="email">Email</label>
+      <br>
+      <input type="email" name="email_1" id="email" required>
+      </section>
+      <hr>
+
+      <section class="lahir">
+      <label for="lahir">Tanggal Lahir</label>
+      <br>
+      <input type="date" name="lahir_1" id="lahir" required>
+      </section>
+      <hr>
+
+      <section class="foto">
+      <label for="pasfoto">Pas Foto 3*4 </label>
+      <br>
+      <input type="file" name="pasfoto_1" id="pasfoto" accept="image/*,.pdf" required>
+      </section>
+      <hr>
+        <section class="submission">
+            <input type="submit" id="submit" name = "submit" value="Submit">
+          </section>
+        </form>
+      </section>
+    </body>
+  </html>
+  

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} {{title}} {% endblock %}
+{% block content %}
+    <form action="/cekdata" method="POST">
+        <section class="nomorpeserta">
+            <label for="input">Nomor Peserta/Kelompok</label>
+            <br>
+            <input type="text" name= "input" id="input" required>
+        </section>
+        <section class="submission">
+            <input type="submit" id="submit" name = "submit" value="Submit">
+        </section>
+    </form>
+{% endblock %}

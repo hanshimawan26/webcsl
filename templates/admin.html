@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %} {{title}} {% endblock %}
+{% block content %}
+    <form action="/admin" method="POST">
+        <section class="password">
+            <label for="pwd">Password</label>
+            <br>
+            <input type="password" name= "pwd" id="pwd" required>
+        </section>
+        <section class="nomorpeserta">
+            <label for="input">Nomor Peserta/Kelompok</label>
+            <br>
+            <input type="text" name= "input" id="input" required>
+        </section>
+        <section class="submission">
+            <input type="submit" id="submit" name = "submit" value="Submit">
+        </section>
+    </form>
+{% endblock %}
