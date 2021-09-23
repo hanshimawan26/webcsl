@@ -119,17 +119,20 @@ def biaya(cabang_data):
         output = "75"
         return(output)
 
+def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
+        return ''.join(random.choice(chars) for _ in range(size))
+    
 def kodepeserta(id, inisial):
     if id<100:
         if id<10:
-            kodenomor="CSL"+"-"+inisial+"-"+"00"+str(id)
-            return(kodenomor.join(random.choices(string.ascii_uppercase + string.digits, k=4)))
+            kodenomor="CSL"+"-"+inisial+"-"+"00"+str(id)+"-"+id_generator()
+            return(kodenomor)
         else:
-            kodenomor="CSL"+"-"+inisial+"-"+"0"+str(id)
-            return(kodenomor.join(random.choices(string.ascii_uppercase + string.digits, k=4)))
+            kodenomor="CSL"+"-"+inisial+"-"+"0"+str(id)+"-"+id_generator()
+            return(kodenomor)
     else:
-        kodenomor="CSL"+"-"+inisial+"-"+str(id)
-        return(kodenomor.join(random.choices(string.ascii_uppercase + string.digits, k=4)))
+        kodenomor="CSL"+"-"+inisial+"-"+str(id)+"-"+id_generator()
+        return(kodenomor)
 
 def kodeunik(id):
     if id>800:
