@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for, request, redirect, session, flash
-from datetime import datetime 
+from datetime import datetime
 from datetime import timedelta
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
@@ -19,7 +19,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 #app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 db = SQLAlchemy(app)
-
+global pwd_input
+global code_input
 datapeserta = None
 numberid = None
 nomorpeserta_input = None
@@ -121,7 +122,7 @@ def biaya(cabang_data):
 
 def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
         return ''.join(random.choice(chars) for _ in range(size))
-    
+
 def kodepeserta(id, inisial):
     if id<100:
         if id<10:
@@ -137,7 +138,7 @@ def kodepeserta(id, inisial):
 def kodeunik(id):
     if id>800:
         id=id-800
-    
+
     if id<100:
         if id<10:
             unik="00"+str(id)
@@ -702,9 +703,9 @@ def index():
             basketputri_kuota = 1
         elif cabang_data == "band" :
             band_kuota = 1
-        elif cabang_data == "dance" : 
+        elif cabang_data == "dance" :
             dance_kuota = 1
-        elif cabang_data == "foto" : 
+        elif cabang_data == "foto" :
             foto_kuota = 1
         elif cabang_data == "debat" :
             debat_kuota = 1
@@ -735,15 +736,15 @@ def index():
         datapeserta.kodeunik_data = kodeunik(tableid)
         db.session.commit()
         datapeserta.biayapeserta_data = biayapeserta(datapeserta.biaya_data, datapeserta.kodeunik_data)
-        
+
         db.session.commit()
 
         global numberid
         numberid = datapeserta._id
 
         return redirect (url_for('submit'))
-    
-    elif request.method == "GET": 
+
+    elif request.method == "GET":
         print ("get")
         catur_list = []
         film_list = []
@@ -790,7 +791,7 @@ def index():
             padus_list.append(data.padus_kuota)
         for data in table:
             design_list.append(data.design_kuota)
-        
+
         print("catur")
         print(sum(catur_list))
 
@@ -822,7 +823,7 @@ def submit():
     output = peserta.query.filter_by(_id=numberid).first()
     if output == None:
         return redirect(url_for('index'))
-    else: 
+    else:
         biayaoutput = output.biayapeserta_data
         kodepesertaoutput = output.kodepeserta_data
         print(biayaoutput)
@@ -842,14 +843,14 @@ def cekdata():
         print("datainput")
 
         return redirect(url_for('view'))
-    
-    elif request.method == "GET": 
+
+    elif request.method == "GET":
         print("get")
         return render_template('cekdata.html', title='Cek Data')
 
 @app.route('/view', methods=['GET', 'POST'])
 def view():
-    if request.method == 'POST':
+    if request.method == 'GET':
         print('loadedview')
         user = peserta.query.filter_by(kodepeserta_data = nomorpeserta_input).first()
         if user == None:
@@ -857,8 +858,8 @@ def view():
         else:
             print(user.sekolah_data)
             return render_template('view.html', item=user)
-    elif request.method == 'GET':
-        return redirect(url_for('cekdata.html'))
+    elif request.method == 'POST':
+        return redirect(url_for('cekdata'))
 
 @app.route('/admin', methods = ["GET","POST"])
 def admin():
@@ -870,16 +871,14 @@ def admin():
         pwd = request.form["pwd"]
         code = request.form["input"]
 
-        global pwd_input
-        global code_input
         pwd_input = pwd
         code_input = code
 
         print("passwordinput")
 
         return redirect(url_for('edit'))
-    
-    elif request.method == "GET": 
+
+    elif request.method == "GET":
         print("get")
         return render_template('admin.html', title='Admin')
 
@@ -892,12 +891,10 @@ def edit():
         pwd = request.form["pwd"]
         code = request.form["input"]
         print("password validation")
-        if pwd_input != password:
+        if pwd != password:
             print("incorrect pwd")
             return redirect (url_for('admin'))
 
-        global pwd_input
-        global code_input
         pwd_input = pwd
         code_input = code
 
@@ -1065,7 +1062,7 @@ def edit():
             edit.email_1_data = email_1_data
         if lahir_1_data != "":
             edit.lahir_1_data = lahir_1_data
-        
+
         nama_2_data = request.form["nama_2"]
         telpon_2_data = request.form["telpon_2"]
         email_2_data = request.form["email_2"]
@@ -1099,7 +1096,7 @@ def edit():
             edit.email_3_data = email_3_data
         if lahir_3_data != "":
             edit.lahir_3_data = lahir_3_data
-        
+
         nama_4_data = request.form["nama_4"]
         telpon_4_data = request.form["telpon_4"]
         email_4_data = request.form["email_4"]
@@ -1116,7 +1113,7 @@ def edit():
             edit.email_4_data = email_4_data
         if lahir_4_data != "":
             edit.lahir_4_data = lahir_4_data
-        
+
         nama_5_data = request.form["nama_5"]
         telpon_5_data = request.form["telpon_5"]
         email_5_data = request.form["email_5"]
@@ -1133,7 +1130,7 @@ def edit():
             edit.email_5_data = email_5_data
         if lahir_5_data != "":
             edit.lahir_5_data = lahir_5_data
-        
+
         nama_6_data = request.form["nama_6"]
         telpon_6_data = request.form["telpon_6"]
         email_6_data = request.form["email_6"]
@@ -1167,7 +1164,7 @@ def edit():
             edit.email_7_data = email_7_data
         if lahir_7_data != "":
             edit.lahir_7_data = lahir_7_data
-        
+
         nama_8_data = request.form["nama_8"]
         telpon_8_data = request.form["telpon_8"]
         email_8_data = request.form["email_8"]
@@ -1184,7 +1181,7 @@ def edit():
             edit.email_8_data = email_8_data
         if lahir_8_data != "":
             edit.lahir_8_data = lahir_8_data
-        
+
         nama_9_data = request.form["nama_9"]
         telpon_9_data = request.form["telpon_9"]
         email_9_data = request.form["email_9"]
@@ -1201,7 +1198,7 @@ def edit():
             edit.email_9_data = email_9_data
         if lahir_9_data != "":
             edit.lahir_9_data = lahir_9_data
-        
+
         nama_10_data = request.form["nama_10"]
         telpon_10_data = request.form["telpon_10"]
         email_10_data = request.form["email_10"]
@@ -1235,7 +1232,7 @@ def edit():
             edit.email_11_data = email_11_data
         if lahir_11_data != "":
             edit.lahir_11_data = lahir_11_data
-        
+
         nama_12_data = request.form["nama_12"]
         telpon_12_data = request.form["telpon_12"]
         email_12_data = request.form["email_12"]
@@ -1252,7 +1249,7 @@ def edit():
             edit.email_12_data = email_12_data
         if lahir_12_data != "":
             edit.lahir_12_data = lahir_12_data
-        
+
         nama_13_data = request.form["nama_13"]
         telpon_13_data = request.form["telpon_13"]
         email_13_data = request.form["email_13"]
@@ -1269,7 +1266,7 @@ def edit():
             edit.email_13_data = email_13_data
         if lahir_13_data != "":
             edit.lahir_13_data = lahir_13_data
-        
+
         nama_14_data = request.form["nama_14"]
         telpon_14_data = request.form["telpon_14"]
         email_14_data = request.form["email_14"]
@@ -1303,7 +1300,7 @@ def edit():
             edit.email_15_data = email_15_data
         if lahir_15_data != "":
             edit.lahir_15_data = lahir_15_data
-        
+
         nama_16_data = request.form["nama_16"]
         telpon_16_data = request.form["telpon_16"]
         email_16_data = request.form["email_16"]
@@ -1320,7 +1317,7 @@ def edit():
             edit.email_16_data = email_16_data
         if lahir_16_data != "":
             edit.lahir_16_data = lahir_16_data
-        
+
         nama_17_data = request.form["nama_17"]
         telpon_17_data = request.form["telpon_17"]
         email_17_data = request.form["email_17"]
@@ -1337,7 +1334,7 @@ def edit():
             edit.email_17_data = email_17_data
         if lahir_17_data != "":
             edit.lahir_17_data = lahir_17_data
-        
+
         nama_18_data = request.form["nama_18"]
         telpon_18_data = request.form["telpon_18"]
         email_18_data = request.form["email_18"]
@@ -1371,7 +1368,7 @@ def edit():
             edit.email_19_data = email_19_data
         if lahir_19_data != "":
             edit.lahir_19_data = lahir_19_data
-        
+
         nama_20_data = request.form["nama_20"]
         telpon_20_data = request.form["telpon_20"]
         email_20_data = request.form["email_20"]
@@ -1388,7 +1385,7 @@ def edit():
             edit.email_20_data = email_20_data
         if lahir_20_data != "":
             edit.lahir_20_data = lahir_20_data
-        
+
         db.session.commit()
 
         tableid = edit._id
@@ -1407,8 +1404,8 @@ def edit():
         db.session.commit()
 
         return redirect (url_for('edited'))
-    
-    elif request.method == "GET": 
+
+    elif request.method == "GET":
         return redirect(url_for('admin'))
 
 @app.route('/edited', methods=['GET', 'POST'])
@@ -1417,5 +1414,5 @@ def edited():
 
 if __name__ == "__main__":
     db.create_all()
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5000) #ssl_context='adhoc')
     #host='0.0.0.0', port=5000, url_scheme='https')
