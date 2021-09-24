@@ -841,21 +841,24 @@ def cekdata():
 
         print("datainput")
 
-        return redirect (url_for('view'))
+        return redirect(url_for('view'))
     
     elif request.method == "GET": 
-        print ("get")
+        print("get")
         return render_template('cekdata.html', title='Cek Data')
 
 @app.route('/view', methods=['GET', 'POST'])
 def view():
-    print('loadedview')
-    user = peserta.query.filter_by(kodepeserta_data = nomorpeserta_input).first()
-    if user == None:
-        return redirect (url_for('cekdata'))
-    else:
-        print(user.sekolah_data)
-        return render_template('view.html', item=user)
+    if request.method == 'POST':
+        print('loadedview')
+        user = peserta.query.filter_by(kodepeserta_data = nomorpeserta_input).first()
+        if user == None:
+            return redirect (url_for('cekdata'))
+        else:
+            print(user.sekolah_data)
+            return render_template('view.html', item=user)
+    elif request.method == 'GET':
+        return redirect(url_for('cekdata.html'))
 
 @app.route('/admin', methods = ["GET","POST"])
 def admin():
@@ -874,15 +877,31 @@ def admin():
 
         print("passwordinput")
 
-        return redirect (url_for('edit'))
+        return redirect(url_for('edit'))
     
     elif request.method == "GET": 
-        print ("get")
+        print("get")
         return render_template('admin.html', title='Admin')
 
 @app.route('/edit', methods=['GET', 'POST'])
 def edit():
     if request.method == "POST":
+        print("start POST for edit")
+        pwd = None
+        code = None
+        pwd = request.form["pwd"]
+        code = request.form["input"]
+        print("password validation")
+        if pwd_input != password:
+            print("incorrect pwd")
+            return redirect (url_for('admin'))
+
+        global pwd_input
+        global code_input
+        pwd_input = pwd
+        code_input = code
+
+        print("passwordinput")
         edit = peserta.query.filter_by(kodepeserta_data = code_input).first()
         print("loaded index")
         kodepeserta_data = None
@@ -1390,17 +1409,7 @@ def edit():
         return redirect (url_for('edited'))
     
     elif request.method == "GET": 
-        print ("get")
-        print('loadededit')
-        user = peserta.query.filter_by(kodepeserta_data = code_input).first()
-        if pwd_input != password:
-            return redirect (url_for('admin'))
-        else:
-            if user == None:
-                return redirect (url_for('admin'))
-            else:
-                print(user.sekolah_data)
-                return render_template('edit.html')
+        return redirect(url_for('admin'))
 
 @app.route('/edited', methods=['GET', 'POST'])
 def edited():
