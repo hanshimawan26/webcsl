@@ -26,7 +26,7 @@ numberid = None
 nomorpeserta_input = None
 code_input = None
 pwd_input = None
-password = "1234"
+password = "daganteng"
 
 def sisakuota(filled, max) :
     sisa = max - filled
@@ -120,7 +120,7 @@ def biaya(cabang_data):
         output = "75"
         return(output)
 
-def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
+def id_generator(size=3, chars=string.ascii_uppercase + string.digits):
         return ''.join(random.choice(chars) for _ in range(size))
 
 def kodepeserta(id, inisial):
