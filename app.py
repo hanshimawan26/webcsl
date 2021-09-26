@@ -370,7 +370,11 @@ class peserta (db.Model):
         self.lahir_20_data = lahir_20_data
         self.verifikasi_data = verifikasi_data
 
-@app.route('/', methods=['POST','GET'])
+@app.route('/', methods=['GET'])
+def home():
+    return render_template('home.html')
+
+@app.route('/pendaf', methods=['POST','GET'])
 def index():
     if request.method == "POST":
         print("loaded index")
