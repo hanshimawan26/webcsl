@@ -14,6 +14,8 @@ app = Flask(__name__)
 app.secret_key = 'xcvbnm,cvbnm,dcvfbgnhmj,kcvbnm,dcvfbghnmj'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pendaf.sqlite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+context = ssl.SSLContext()
+context.load_cert_chain('fullchain.pem', 'privkey.pem')
 #UPLOAD_FOLDER = 'files'
 #ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg'}
 #app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -1420,5 +1422,4 @@ def team():
 
 if __name__ == "__main__":
     db.create_all()
-    app.run(debug=True, host='0.0.0.0', port=5000) #ssl_context='adhoc')
-    #host='0.0.0.0', port=5000, url_scheme='https')
+    app.run(debug=True, host='0.0.0.0', port=5000, ssl_context=context)
