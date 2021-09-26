@@ -895,20 +895,7 @@ def admin():
 @app.route('/edit', methods=['GET', 'POST'])
 def edit():
     if request.method == "POST":
-        print("start POST for edit")
-        pwd = None
-        code = None
-        pwd = request.form["pwd"]
-        code = request.form["input"]
-        print("password validation")
-        if pwd != password:
-            print("incorrect pwd")
-            return redirect (url_for('admin'))
-
-        pwd_input = pwd
         code_input = code
-
-        print("passwordinput")
         edit = peserta.query.filter_by(kodepeserta_data = code_input).first()
         print("loaded index")
         kodepeserta_data = None
