@@ -265,3 +265,17 @@ footer a{
 li {
   margin-left: 3vw;
 }
+
+h3 {
+  color:rgb(0, 13, 71);
+}
+
+h4 {
+  font-family: Rubik, Arial;
+  font-size: 20px;
+}
+
+h4 a {
+  font-family: Rubik, Arial;
+  font-size: 20px;
+}
