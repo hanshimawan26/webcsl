@@ -12,16 +12,18 @@ a:hover {
 }
 ul {
   padding: 0;
-  list-style-type: none;
 }
 
 body {
-  background-color: #1D54B2;
-  font-family: Rubik, Arial;
+  background-image: url('\ atlantis background.png');
   background-size: cover;
   color: white;
   margin: 0;
   padding: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: Rubik, Arial;
 }
 
 .header {
@@ -293,7 +295,6 @@ footer a{
 @media (min-width: 1920px){
   body {
     background-image: url('\ atlantis background.png');
-    font-family: Rubik, Arial;
     background-size: cover;
     color: white;
     margin: 0;
@@ -314,6 +315,10 @@ footer a{
   }
 }
 
+#about {
+  margin-bottom: 5vh;
+}
+
 #about h2 {
   text-align: center;
   font-size: 30px;
@@ -326,24 +331,34 @@ footer a{
 }
 
 .subsection h3 {
-  background-color: transparent;
+  background-color: white;
   color: black;
   padding: 2vh 2vw 2vh 2vw;
   text-align: left;
   font-size: 30px;
   font-family: Rubik, Arial;
+  margin-bottom:0;
 }
 
 .subsection .isi{
   background-color: whitesmoke;
-  color:rgb(0, 16, 85);
+  color:rgb(0, 21, 112);
   padding: 2vh 2vw 2vh 2vw;
   font-size: 20px;
   font-family: Rubik, Arial;
+  margin-top: 0;
 }
 
 .subtitle {
   text-align: center;
   width: 70vw;
   padding: 2vh 15vw 2vh 15vw;
+}
+
+.subtitle h2 {
+  color:white;
+}
+
+.subsection p{
+  color:rgb(0, 21, 112);
 }
