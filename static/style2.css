@@ -65,7 +65,6 @@ h1 {
   margin: 10vh 0 0 0;
   height: 99vh;
   font-size: 20px;
-  z-index: 2;
   position: absolute;
   padding-top: 20px;
 }
@@ -253,6 +252,9 @@ h2 {
     color: white;
     margin: 0;
     padding: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
   }
 
   #submit {
