@@ -101,8 +101,10 @@ h1 {
   display: inline-block;
   font-size: 20px;
   font-family: "Verdana", sans-serif;
-  background-color:rgb(83, 83, 83);
-  border:0;
+  background-color:transparent;
+  border: 1px solid;
+  margin-top: 1vh;
+  border-color: rgb(255, 255, 255);
 }
 
 #submit:hover {
@@ -241,4 +243,25 @@ p {
 h2 {
   font-size: 25px;
   color: rgb(0, 31, 116);
+}
+
+@media (min-width: 1920px){
+  body {
+    background-image: url('\ atlantis background.png');
+    font-family: Rubik, Arial;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  #submit {
+    color: white;
+    border-color: white;
+  }
+
+  form {
+    background-color: transparent;
+    margin: 0;
+  }
 }
