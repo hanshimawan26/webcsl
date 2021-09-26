@@ -313,3 +313,37 @@ footer a{
     margin: 0;
   }
 }
+
+#about h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.subsection {
+  width: 70vw;
+  margin: 5vh 15vw 0 15vw;
+  background-color: white;
+}
+
+.subsection h3 {
+  background-color: transparent;
+  color: black;
+  padding: 2vh 2vw 2vh 2vw;
+  text-align: left;
+  font-size: 30px;
+  font-family: Rubik, Arial;
+}
+
+.subsection .isi{
+  background-color: whitesmoke;
+  color:rgb(0, 16, 85);
+  padding: 2vh 2vw 2vh 2vw;
+  font-size: 20px;
+  font-family: Rubik, Arial;
+}
+
+.subtitle {
+  text-align: center;
+  width: 70vw;
+  padding: 2vh 15vw 2vh 15vw;
+}
