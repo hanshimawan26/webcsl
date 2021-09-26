@@ -4,22 +4,26 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style2.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='navbar.css')}}">
     <title>{% block title %} {% endblock title %}</title>
   </head>
   <body>
     <section class=header>
+      <a href="#" class="nav-logo">
+        <img width:100% src="{{url_for('static', filename='Artboard 1.png')}}" alt="Logo Canisius Super League" class="logo">
+      </a>
       <nav class="navbar">
-        <img width:100% src="{{url_for('static', filename='Artboard 1.png')}}" alt="Logo Canisius Super League" class="logo">  
-        <div class="ham">  
-        <span class="bar1"></span>  
-        <span class="bar2"></span>  
-        <span class="bar3"></span>  
-        </div>  
-        <ul class="nav-sub">  
-         <li class="list-item"><a href="/" class="nav-link">Home</a></li>  
-         <li class="list-item"><a href="/pendaf" class="nav-link">Daftar</a></li>  
-         <li class="list-item"><a href="/cekdata" class="nav-link">Cek Data</a></li>  
-        </ul>  
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="/pendaf" class="nav-link">Pendaftaran</a>
+            </li>
+            <li class="nav-item">
+                <a href="/cekdata" class="nav-link">Cek Data</a>
+            </li>
+        </ul>
       </nav>
     </section>
     <section id="overlay">

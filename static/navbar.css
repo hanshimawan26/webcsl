@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header li {
+    list-style: none;
+}
+
+.header a {
+  text-decoration: none;
+  color: #1E1E23;
+  opacity:1;
+  font-family: Rubik, Arial;
+  font-size: 20px;
+  font-weight: 400;
+  transition: 200ms;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  vertical-align: top;
+  z-index: 3;
+  margin-top: 0vh;
+  padding: 0;
+  background-color: white;
+}
+
+#overlay {
+  width: 100%;
+  margin: 15vh 0 0 0;
+  height: 99vh;
+  font-size: 20px;
+  position: absolute;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  float: right;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+  margin-top: 1.5vh;
+}
+
+.nav-link{
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #475569;
+}
+
+.nav-link:hover{
+  color: #482ff7;
+}
+
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #482ff7;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.logo {
+  float: left;
+  height: 10vh;
+  min-height: 70px;
+  display: block;
+  margin: 0 2px 0 0;
+}

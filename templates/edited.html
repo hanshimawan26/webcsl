@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
-    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-    <title>Forms Review</title>
-  </head>
-  <body>
-    <section class=header>
-      <nav class="navbar">
-        <img width:100% src="{{url_for('static', filename='Artboard 1.png')}}" alt="Logo Canisius Super League" class="logo">  
-        <div class="ham">  
-        <span class="bar1"></span>  
-        <span class="bar2"></span>  
-        <span class="bar3"></span>  
-        </div>  
-        <ul class="nav-sub">  
-         <li class="list-item"><a href="#" class="nav-link">Home</a></li>  
-         <li class="list-item"><a href="#" class="nav-link">Blogs</a></li>  
-         <li class="list-item"><a href="#" class="nav-link">About me</a></li>  
-        </ul>  
-      </nav>
-    </section>
-    <section id="overlay">
-      <h1>Data Tersimpan</h1>
-      <br>
-    </section>
-  </body>
-</html>
+{% extends "base.html" %}
+{% block title %} {{title}} {% endblock %}
+{% block content %}
+  <h1>Data Tersimpan</h1>
+  <br>
+{% endblock %}

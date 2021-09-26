@@ -1,43 +1,19 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
-    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-    <title>Forms Review</title>
-  </head>
-  <body>
-    <section class=header>
-      <nav class="navbar">
-        <img width:100% src="{{url_for('static', filename='Artboard 1.png')}}" alt="Logo Canisius Super League" class="logo">  
-        <div class="ham">  
-        <span class="bar1"></span>  
-        <span class="bar2"></span>  
-        <span class="bar3"></span>  
-        </div>  
-        <ul class="nav-sub">  
-          <li class="list-item"><a href="/" class="nav-link">Home</a></li>  
-          <li class="list-item"><a href="/pendaf" class="nav-link">Daftar</a></li>  
-          <li class="list-item"><a href="/cekdata" class="nav-link">Cek Data</a></li> 
-        </ul>  
-      </nav>
-    </section>
-    <section id="overlay">
-      {% if kodepeserta != None %}
-      <div id="instruction">
-        <h1>Mohon Segera Bayar Biaya Pendaftaran dan Upload Bukti Transfer ke Folder Drive</h1>
-        <br>
-      </div>
-      <div id="output">
-          <h2>Biaya Pendaftaran : {{ biaya }}</h2>
-          <p>Bayar Tepat hingga 3 digit terakhir supaya dapat di verifikasi panitia !</p>
-          <br>
-          <h2>Kode Peserta/Kelompok : {{ kodepeserta }}</h2>
-          <p>Mohon simpan kode peserta dan jangan di sebar !</p>
-          <br>
-          <a href="/cekdata" id="button">Cek Data Peserta</a>
-      </div>
-      {% endif %}
-    </section>
-  </body>
-</html>
+{% extends "base.html" %}
+{% block title %} {{title}} {% endblock %}
+{% block content %}
+  {% if kodepeserta != None %}
+  <div id="instruction">
+    <h1>Mohon Segera Bayar Biaya Pendaftaran dan Upload Bukti Transfer ke Folder Drive</h1>
+    <br>
+  </div>
+  <div id="output">
+      <h2>Biaya Pendaftaran : {{ biaya }}</h2>
+      <p>Bayar Tepat hingga 3 digit terakhir supaya dapat di verifikasi panitia !</p>
+      <br>
+      <h2>Kode Peserta/Kelompok : {{ kodepeserta }}</h2>
+      <p>Mohon simpan kode peserta dan jangan di sebar !</p>
+      <br>
+      <a href="/cekdata" id="button">Cek Data Peserta</a>
+  </div>
+  {% endif %}
+{% endblock %}
