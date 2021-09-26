@@ -15,7 +15,7 @@ app.secret_key = 'xcvbnm,cvbnm,dcvfbgnhmj,kcvbnm,dcvfbghnmj'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pendaf.sqlite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 context = ssl.SSLContext()
-context.load_cert_chain('fullchain.pem', 'privkey.pem')
+context.load_cert_chain('/root/webcsl/fullchain.pem', '/root/webcsl/privkey.pem')
 #UPLOAD_FOLDER = 'files'
 #ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg'}
 #app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
