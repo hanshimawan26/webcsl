@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %} {{title}} {% endblock %}
 {% block content %}
-    <form action="/edit" method="POST">
+    <form action="/admin" method="POST">
         <section class="password">
             <label for="pwd">Password</label>
             <br>
@@ -11,6 +11,16 @@
             <label for="input">Nomor Peserta/Kelompok</label>
             <br>
             <input type="text" name= "input" id="input" required>
+        </section>
+        <section class="verifikasidata">
+            <span>Verifikasi Data</span>
+            <br>
+            <input type="radio" name="verifikasi" id="y" value="SUDAH" required>
+            <label for="y">SUDAH</label>
+            <br>
+            <input type="radio" name="verifikasi" id="n" value="BELUM">
+            <label for="n">BELUM</label>
+            <br>
         </section>
         <section class="submission">
             <input type="submit" id="submit" name = "submit" value="Submit">

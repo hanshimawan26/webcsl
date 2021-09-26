@@ -26,7 +26,7 @@ numberid = None
 nomorpeserta_input = None
 code_input = None
 pwd_input = None
-password = "daganteng"
+password = "dajelek"
 
 def sisakuota(filled, max) :
     sisa = max - filled
@@ -870,18 +870,28 @@ def admin():
         code = None
         pwd = request.form["pwd"]
         code = request.form["input"]
+        verify = request.form["verifikasi"]
 
-        pwd_input = pwd
-        code_input = code
+        user = peserta.query.filter_by(kodepeserta_data = code).first()
 
         print("passwordinput")
 
-        return redirect(url_for('edit'))
+        print("password validation")
+        if pwd != password:
+            print("incorrect pwd")
+            return redirect (url_for('admin'))
+        elif user == None:
+            return redirect (url_for('admin'))
+        else:
+            user.verifikasi_data = verify
+            db.session.commit()
+            return redirect (url_for('edited'))
 
     elif request.method == "GET":
         print("get")
         return render_template('admin.html', title='Admin')
 
+'''
 @app.route('/edit', methods=['GET', 'POST'])
 def edit():
     if request.method == "POST":
@@ -1407,6 +1417,7 @@ def edit():
 
     elif request.method == "GET":
         return redirect(url_for('admin'))
+'''
 
 @app.route('/edited', methods=['GET', 'POST'])
 def edited():
