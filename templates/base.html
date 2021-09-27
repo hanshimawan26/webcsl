@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style2.css')}}">
-    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='navbar.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='slideshow.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='countdown.css')}}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <title>{% block title %} {% endblock title %}</title>
     <link rel="icon" type="image" href="static\favicon.png"/>
@@ -29,29 +32,25 @@ function close(){
 {% endblock head %}
   </head>
   <body>
-    <section class=header>
-      <div class="logo"><a href="#" class="nav-logo">
+    <nav class="navbar">
+      <a href="#" class="nav-logo">
         <img width:100% src="{{url_for('static', filename='Artboard 1.png')}}" alt="Logo Canisius Super League" class="logo">
-        </a></div>
-      <nav class="navbar">
-        <div class="openMenu"><i class="fa fa-bars"></i></div>
-        <ul class="mainMenu">
-            <li class="nav-item">
-                <a href="/" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="/pendaf" class="nav-link">Pendaftaran</a>
-            </li>
-            <li class="nav-item">
-                <a href="/cekdata" class="nav-link">Cek Data</a>
-            </li>
-            <li class="nav-item">
-                <a href="/syarat" class="nav-link">SOP</a>
-            </li>
-          <div class="closeMenu"><i class="fa fa-times"></i></div>
+      </a>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pendaftaran">SOP Pendaftaran</a></li>
+          <li><a href="/pendaf">Daftar</a></li>
+          <li><a href="/syarat">SOP Lomba</a></li>
+          <li><a href="/cekdata">Cek Data</a></li>
         </ul>
-      </nav>
-    </section>
+      </div>
+    </nav>
     <section id="overlay">
       <section id="content">
         {% block content %}
@@ -63,4 +62,5 @@ function close(){
       </section>
     </section>
   </body>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </html>

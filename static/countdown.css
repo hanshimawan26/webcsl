@@ -1,0 +1,64 @@
+#Days, #Hours, #Minutes, #Seconds{
+  margin: 0px;
+  margin-top: -130px;
+  font-size: 30px;
+  letter-spacing: 25px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bolder;
+  padding-left: 30px;
+  color: black;
+}
+#D, #H, #M, #S{
+  font-family: 'Nova Mono', monospace;
+  margin: 0px;
+  font-size: 150px;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 0 0 10px #fff, 0 0 30px #fff, 0 0 60px #fff;
+}
+#S{
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+#Div-D, #Div-H, #Div-M, #Div-S{
+  display: inline-block;
+  margin-left: 75px;
+}
+#Div-D{
+  margin-left: 0px;
+}
+#Div-Timer{
+  text-align: center;
+  display: block;
+  font-family: 'Nova Mono', monospace;
+  font-weight: bold;
+}
+#Container-Timer{
+  width: 84vw;
+  margin: 0 auto;
+}
+#Timer-Section{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10vh;
+}
+#Title{
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  color: white;
+  margin-bottom: 0px;
+  text-shadow: 0 0 1px #fff, 0 0 3px #fff;
+}
+#Coming-Soon{
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: 20px;
+  color: white;
+  text-shadow: 0 0 1px #fff, 0 0 3px #fff;
+}

@@ -76,16 +76,16 @@ def inisialcabang(cabang_data):
 
 def biaya(cabang_data):
     if cabang_data=="chess":
-        output = "50"
+        output = "75"
         return(output)
     elif cabang_data=="film":
         output = "75"
         return(output)
     elif cabang_data=="basketputra":
-        output = "50"
+        output = "75"
         return(output)
     elif cabang_data=="basketputri":
-        output = "50"
+        output = "75"
         return(output)
     elif cabang_data=="band":
         output = "75"
@@ -94,25 +94,25 @@ def biaya(cabang_data):
         output = "75"
         return(output)
     elif cabang_data=="foto":
-        output = "50"
+        output = "75"
         return(output)
     elif cabang_data=="debat":
         output = "75"
         return(output)
     elif cabang_data=="pidato":
-        output = "50"
+        output = "75"
         return(output)
     elif cabang_data=="kosong":
-        output = "50"
+        output = "75"
         return(output)
     elif cabang_data=="senjata":
-        output = "50"
+        output = "75"
         return(output)
     elif cabang_data=="ganda":
-        output = "50"
+        output = "75"
         return(output)
     elif cabang_data=="padus":
-        output = "150"
+        output = "75"
         return(output)
     elif cabang_data=="design":
         output = "75"
