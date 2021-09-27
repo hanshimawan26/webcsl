@@ -1421,6 +1421,10 @@ def edited():
 def team():
     return render_template('team.html')
 
+@app.route('/syarat', methods=['GET'])
+def team():
+    return render_template('sop.html')
+
 if __name__ == "__main__":
     db.create_all()
     app.run(debug=True, host='0.0.0.0', port=5000, ssl_context=context)
