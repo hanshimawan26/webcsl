@@ -1,4 +1,4 @@
-a {
+.navbar a {
   text-decoration: none;
   color: #1E1E23;
   opacity:1;
@@ -128,6 +128,9 @@ h1 {
 h2 {
   font-size: 25px;
   color: white;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 p {
@@ -185,7 +188,7 @@ label {
 }
 
 input[type=text] {
-  width: 45%;
+  width: 100%;
   padding: 10px 10px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -194,7 +197,7 @@ input[type=text] {
 }
 
 input[type=url] {
-  width: 45%;
+  width: 100%;
   padding: 10px 10px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -203,7 +206,7 @@ input[type=url] {
 }
 
 input[type=email] {
-  width: 45%;
+  width: 100%;
   padding: 10px 10px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -212,7 +215,7 @@ input[type=email] {
 }
 
 input[type=date] {
-  width: 45%;
+  width: 100%;
   padding: 10px 10px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -221,7 +224,7 @@ input[type=date] {
 }
 
 #tim {
-  width: 45%;
+  width: 100%;
   padding: 10px 10px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -233,4 +236,17 @@ input[type=date] {
   margin-top: 5vh;
   width: auto;
   text-align:center;
+}
+
+a {
+  text-decoration: None;
+  color:rgb(159, 252, 244);
+  font-size: 25px;
+  font-family: 'Roboto';
+}
+
+td {
+  padding : 1vh 1vw;
+  margin: 0;
+  width: 40vw;
 }

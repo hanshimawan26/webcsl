@@ -1,18 +1,12 @@
 {% extends "base.html" %}
+{% block head %}
+<style>
+  body {
+    overflow-y: hidden;
+  }
+</style>
+{% endblock head %}
 {% block title %} Canisius Super League {% endblock %}
 {% block content %}
-    <section id="soppendaf">
-      <iframe src="{{url_for('static', filename='SOP PENDAFTARAN CSL.pdf')}}">
-    </section>
-    <section id="kuotalomb">
-      <table>
-        <thead>
-          <tr>
-            <td>
-              <h2>Lomba</h2>
-            </td>
-          </tr>
-        </thead>
-      </table>
-    </section>
+<iframe src="{{url_for('static', filename='SOP PENDAFTARAN CSL.pdf')}}">
 {% endblock %}

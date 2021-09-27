@@ -316,24 +316,37 @@ table {
 iframe {
   height: 88vh;
   width: 100vw;
-  margin-bottom: 0;
-  z-index: 1;
-}
-
-#soppendaf {
   position: absolute;
   margin-top: -6vh;
 }
 
-#buttonpendaf {
-  position: fixed;
+#FormPendaf {
+  color: rgb(0, 0, 0);
+  position: absolute;
   width: 100vw;
+  margin: 1vh 0 1vh 0;
+  background-color: rgb(253, 253, 253);
+  text-align: center;
+  padding: 5vh 0 5vh 0;
+  float: center;
+}
+
+button {
+  margin-top: 10px;
+  width: 50vw;
   height: 5vh;
-  background-color: greenyellow;
+  background-color: rgb(81, 205, 50);
+  border-radius: 20px;
+  border-color: white;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: white;
+}
+
+#pendaf {
   color: white;
-  font-size: 40px;
-  padding: auto;
-  font-weight: bold;
-  z-index: 1;
-  display:box;
+  font-family: 'Roboto';
+  font-size: 20px;
 }

@@ -14,9 +14,6 @@
 const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
 
-
-
-
 openMenu.addEventListener('click',show);
 closeMenu.addEventListener('click',close);
 
@@ -28,6 +25,8 @@ function close(){
     mainMenu.style.top = '-100%';
 }
     </script>
+{% block head %}
+{% endblock head %}
   </head>
   <body>
     <section class=header>
