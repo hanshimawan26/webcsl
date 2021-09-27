@@ -45,7 +45,6 @@ form {
   height: 80%;
   overflow: auto;
   background-color: transparent;
-  margin: 0;
   padding: 1vh 5vw 1vh 5vw;
   margin: 1vh 5vw 1vh 5vw;
 }
@@ -78,10 +77,6 @@ h1 {
 
 #checkbox {
   display: inline-block; 
-}
-
-.toppings label, .cheesy label {
-  margin-right: 25px;
 }
 
 #submit {
@@ -249,4 +244,14 @@ td {
   padding : 1vh 1vw;
   margin: 0;
   width: 40vw;
+}
+
+@media screen and (max-width: 800px) {
+  form {
+    padding : 1vh 1vw;
+    margin: 1vh 0vw;
+  }
+  td {
+    width: 100vw;
+  }
 }
