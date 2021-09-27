@@ -28,19 +28,7 @@ body {
 }
 
 #content {
-  position: relative;
   min-height: 100vh;
-}
-
-footer {
-  clear: both;
-  position: relative;
-  height: 40px;
-  margin-bottom: 0;
-  background-color: rgb(0, 13, 71);
-  color:whitesmoke;
-  width: 100%;
-  text-align: center;
 }
 
 .title{
@@ -161,7 +149,7 @@ h2 {
   color: rgb(255, 255, 255);
 }
 
-footer a{
+.footer a{
   margin: 0;
   font-size: 15px;
   color:whitesmoke;
@@ -349,4 +337,67 @@ button {
   color: white;
   font-family: 'Roboto';
   font-size: 20px;
+}
+
+#Days, #Hours, #Minutes, #Seconds{
+  margin: 0px;
+  margin-top: -115px;
+  font-size: 30px;
+  letter-spacing: 25px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bolder;
+  padding-left: 30px;
+}
+#D, #H, #M, #S{
+  margin: 0px;
+  font-size: 150px;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 0 0 10px #fff, 0 0 30px #fff, 0 0 60px #fff;
+}
+#S{
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+#Div-D, #Div-H, #Div-M, #Div-S{
+  display: inline-block;
+  margin-left: 75px;
+}
+#Div-D{
+  margin-left: 0px;
+}
+#Div-Timer{
+  text-align: center;
+  display: block;
+  font-family: 'Nova Mono', monospace;
+}
+#Container-Timer{
+  width: 84vw;
+  margin: 0 auto;
+}
+#Timer-Section{
+  margin-top: 15vh;
+  width: 100%;
+  text-align: center;
+}
+#Title{
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  color: white;
+  margin-bottom: 0px;
+  text-shadow: 0 0 1px #fff, 0 0 3px #fff;
+}
+#Coming-Soon{
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: 20px;
+  color: white;
+  margin-bottom: -100px;
+  text-shadow: 0 0 1px #fff, 0 0 3px #fff;
 }
