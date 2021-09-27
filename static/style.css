@@ -40,12 +40,14 @@ body {
 
 form {
   margin-top: 1vh;
-  text-align: center;
+  text-align: left;
   line-height: 30px;
   height: 80%;
   overflow: auto;
   background-color: transparent;
   margin: 0;
+  padding: 1vh 5vw 1vh 5vw;
+  margin: 1vh 5vw 1vh 5vw;
 }
 
 form hr {
@@ -149,8 +151,15 @@ p {
       border-color: white;
     }
 
-    form {
-      background-color: transparent;
-      margin: 0;
-    }
+}
+
+.option {
+  margin-top: 1vh;
+  height: auto;
+  max-width: 500px;
+  background-color: rgb(2, 95, 95);
+  color: white;
+  border-radius: 20px;
+  padding: 5px 1vw 5px 1vw;
+  font-size: 20px;
 }

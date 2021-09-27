@@ -38,99 +38,109 @@
       <form action="/pendaf" method="POST" enctype="multipart/form-data">
         <h1>Pendaftaran Lomba</h1>
         <section class="sekolah">
-          <label for="sekolah">Sekolah</label>
-          <br>
+          <label for="sekolah">Sekolah : </label> 
           <input type="text" name="sekolah" id="sekolah" required>
         </section>
         
 
         <section class="namakelompok">
-          <span>Tim</span>
-          <br>
-          <input type="radio" name="user" id="a" value="A" required>
-          <label for="a">A</label>
-          <br>
-          <input type="radio" name="user" id="b" value="B">
-          <label for="b">B</label>
-          <br>
-          <input type="radio" name="user" id="c" value="C">
-          <label for="c">C</label>
-          <br>
+          <span>Tim     : </span>
+          <input list="user" name="user">
+          <datalist id="user">
+            <option value="A">
+            <option value="B">
+            <option value="C">
+          </datalist>
         </section>
         
 
         <section class="cabang">
+          <br>
           <span>Cabang Lomba yang Ingin Diikuti?</span>
           <br>
           {% if sisacatur != 0 %}
-          <input type="radio" name="cabang" id="chess" value="chess" onclick="cslOptions('chess');">
+          <section class="option">
+          <input type="radio" name="cabang" id="chess" value="chess" class="radio" onclick="cslOptions('chess');">
           <label for="chess">Chess League</label>
-          <br>
+          </section>
           {% endif %}
           {% if sisafilm != 0 %}
-          <input type="radio" name="cabang" id="film" value="film" onclick="cslOptions('film');">
+          <section class="option">
+          <input type="radio" name="cabang" id="film" value="film" class="radio" onclick="cslOptions('film');">
           <label for="film">Film Pendek</label>
-          <br>
+          </section>
           {% endif %}
           {% if sisabasketputra != 0 %}
-          <input type="radio" name="cabang" id="basketputra" value="basketputra" onclick="cslOptions('basketputra');">
+          <section class="option">
+          <input type="radio" name="cabang" id="basketputra" value="basketputra" class="radio" onclick="cslOptions('basketputra');">
           <label for="basketputra">Basket Skills Putra</label>
-          <br>
+          </section>
           {% endif %}
           {% if sisabasketputri != 0 %}
-          <input type="radio" name="cabang" id="basketputri" value="basketputri" onclick="cslOptions('basketputri');">
+          <section class="option">
+          <input type="radio" name="cabang" id="basketputri" value="basketputri" class="radio" onclick="cslOptions('basketputri');">
           <label for="basketputri">Basket Skills Putri</label>
-          <br>
+          </section>
           {% endif %}
           {% if sisaband != 0 %}
-          <input type="radio" name="cabang" id="band" value="band" onclick="cslOptions('band');">
+          <section class="option">
+          <input type="radio" name="cabang" id="band" value="band" class="radio" onclick="cslOptions('band');">
           <label for="band">Band</label>
-          <br>
+          </section>
           {% endif %}
           {% if sisadance != 0 %}
-          <input type="radio" name="cabang" id="dance" value="dance" onclick="cslOptions('dance');">
+          <section class="option">
+          <input type="radio" name="cabang" id="dance" value="dance" class="radio" onclick="cslOptions('dance');">
           <label for="dance">Modern Dance</label>
-          <br>
+          </section>
           {% endif %}
           {% if sisafoto != 0 %}
-          <input type="radio" name="cabang" id="foto" value="foto" onclick="cslOptions('foto');">
+          <section class="option">
+          <input type="radio" name="cabang" id="foto" value="foto" class="radio" onclick="cslOptions('foto');">
           <label for="foto">Fotografi</label>
-          <br>
+          </section>
           {% endif %}
           {% if sisadebat != 0 %}
-          <input type="radio" name="cabang" id="debat" value="debat" onclick="cslOptions('debat');">
+          <section class="option">
+          <input type="radio" name="cabang" id="debat" value="debat" class="radio" onclick="cslOptions('debat');">
           <label for="debat">English Debate</label>
-          <br>
+          </section>
           {% endif %}
           {% if sisapidato != 0 %}
-          <input type="radio" name="cabang" id="pidato" value="pidato" onclick="cslOptions('pidato');">
+          <section class="option">
+          <input type="radio" name="cabang" id="pidato" value="pidato" class="radio" onclick="cslOptions('pidato');">
           <label for="pidato">Pidato</label>
-          <br>
+          </section>
           {% endif %}
           {% if sisakosong != 0 %}
-          <input type="radio" name="cabang" id="kosong" value="kosong" onclick="cslOptions('kosong');">
+          <section class="option">
+          <input type="radio" name="cabang" id="kosong" value="kosong" class="radio" onclick="cslOptions('kosong');">
           <label for="kosong">Pencak Silat Putra Seni Tunggal Tangan Kosong</label>
-          <br>
+          </section>
           {% endif %}
           {% if sisasenjata != 0 %}
-          <input type="radio" name="cabang" id="bersenjata" value="senjata" onclick="cslOptions('senjata');">
+          <section class="option">
+          <input type="radio" name="cabang" id="bersenjata" value="senjata" class="radio" onclick="cslOptions('senjata');">
           <label for="senjata">Pencak Silat Putra Seni Tunggal Bersenjata</label>
-          <br>
+          </section>
           {% endif %}
           {% if sisaganda != 0 %}
-          <input type="radio" name="cabang" id="ganda" value="ganda" onclick="cslOptions('ganda');">
+          <section class="option">
+          <input type="radio" name="cabang" id="ganda" value="ganda" class="radio" onclick="cslOptions('ganda');">
           <label for="ganda">Pencak Silat Putra Seni Ganda Tangan Kosong</label>
-          <br>
+          </section>
           {% endif %}
           {% if sisapadus != 0 %}
-          <input type="radio" name="cabang" id="padus" value="padus" onclick="cslOptions('padus');">
+          <section class="option">
+          <input type="radio" name="cabang" id="padus" value="padus" class="radio" onclick="cslOptions('padus');">
           <label for="padus">Paduan Suara</label>
-          <br>
+          </section>
           {% endif %}
           {% if sisadesign != 0 %}
-          <input type="radio" name="cabang" id="design" value="design" onclick="cslOptions('design');">
+          <section class="option">
+          <input type="radio" name="cabang" id="design" value="design" class="radio" onclick="cslOptions('design');">
           <label for="design">Lomba Seaside Design</label>
-          <br>
+          </section>
           {% endif %}
         </section>
         
