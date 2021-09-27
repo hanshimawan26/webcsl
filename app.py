@@ -1,3 +1,5 @@
+import time
+import ssl
 from flask import Flask, render_template, url_for, request, redirect, session, flash
 from datetime import datetime
 from datetime import timedelta
@@ -15,7 +17,7 @@ app.secret_key = 'xcvbnm,cvbnm,dcvfbgnhmj,kcvbnm,dcvfbghnmj'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pendaf.sqlite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 context = ssl.SSLContext()
-context.load_cert_chain('fullchain.pem', 'privkey.pem')
+context.load_cert_chain('/root/webcsl/fullchain.pem', '/root/webcsl/privkey.pem')
 #UPLOAD_FOLDER = 'files'
 #ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg'}
 #app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -819,6 +821,10 @@ def index():
         print(catur_sisa)
 
         totalsisa = catur_sisa+film_sisa+basketputra_sisa+basketputri_sisa+band_sisa+dance_sisa+foto_sisa+debat_sisa+pidato_sisa+kosong_sisa+senjata_sisa+ganda_sisa+padus_sisa+design_sisa
+        if time.time() < 1632812400:
+            return render_template('closed.html')
+        if time.time() >= 1633744800:
+            return render_template('due.html')
         if totalsisa != 0 :
             return render_template('index.html', title='Pendaftaran', sisacatur = catur_sisa, sisafilm = film_sisa, sisabasketputra = basketputra_sisa, sisabasketputri = basketputri_sisa, sisaband = band_sisa, sisadance = dance_sisa, sisafoto = foto_sisa, sisadebat= debat_sisa, sisapidato = pidato_sisa, sisakosong = kosong_sisa, sisasenjata = senjata_sisa, sisaganda = ganda_sisa, sisapadus = padus_sisa, sisadesign = design_sisa)
         else :
@@ -1419,6 +1425,10 @@ def edited():
 @app.route('/team', methods=['GET'])
 def team():
     return render_template('team.html')
+
+@app.route('/syarat', methods=['GET'])
+def syarat():
+    return render_template('sop.html')
 
 if __name__ == "__main__":
     db.create_all()

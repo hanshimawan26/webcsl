@@ -2,20 +2,41 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style2.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='navbar.css')}}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <title>{% block title %} {% endblock title %}</title>
     <link rel="icon" type="image" href="static\favicon.png"/>
+    <script>
+      const mainMenu = document.querySelector('.mainMenu');
+const closeMenu = document.querySelector('.closeMenu');
+const openMenu = document.querySelector('.openMenu');
+
+
+
+
+openMenu.addEventListener('click',show);
+closeMenu.addEventListener('click',close);
+
+function show(){
+    mainMenu.style.display = 'flex';
+    mainMenu.style.top = '0';
+}
+function close(){
+    mainMenu.style.top = '-100%';
+}
+    </script>
   </head>
   <body>
     <section class=header>
-      <a href="#" class="nav-logo">
+      <div class="logo"><a href="#" class="nav-logo">
         <img width:100% src="{{url_for('static', filename='Artboard 1.png')}}" alt="Logo Canisius Super League" class="logo">
-      </a>
+        </a></div>
       <nav class="navbar">
-        <ul class="nav-menu">
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu">
             <li class="nav-item">
                 <a href="/" class="nav-link">Home</a>
             </li>
@@ -25,6 +46,10 @@
             <li class="nav-item">
                 <a href="/cekdata" class="nav-link">Cek Data</a>
             </li>
+            <li class="nav-item">
+                <a href="/syarat" class="nav-link">SOP</a>
+            </li>
+          <div class="closeMenu"><i class="fa fa-times"></i></div>
         </ul>
       </nav>
     </section>

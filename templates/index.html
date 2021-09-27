@@ -31,6 +31,9 @@
             <li class="nav-item">
                 <a href="/cekdata" class="nav-link">Cek Data</a>
             </li>
+            <li class="nav-item">
+                <a href="/syarat" class="nav-link">SOP</a>
+            </li>
         </ul>
       </nav>
     </section>
@@ -41,7 +44,7 @@
           <label for="sekolah">Sekolah : </label> 
           <input type="text" name="sekolah" id="sekolah" required>
         </section>
-        
+
 
         <section class="namakelompok">
           <span>Tim     : </span>
@@ -52,7 +55,7 @@
             <option value="C">
           </datalist>
         </section>
-        
+
 
         <section class="cabang">
           <br>
@@ -143,42 +146,14 @@
           </section>
           {% endif %}
         </section>
-        
-        <script>
-          const values = {"chess": 1, "film": 12, "basketputra": 1, "basketputri": 1, "band": 10, "dance": 7, "foto": 1, "debat": 3, "pidato": 1, "kosong": 1, "senjata": 1, "ganda": 2, "padus": 20, "design": 5};
-          // 11pm late-night javascript wkwk
-          var bosen;
-          function hideElement(id){
-            document.getElementById(id).style.display = 'none'; // hide element
-          }
-
-          function showElement(id){
-            document.getElementById(id).style.display = ''; // i prefer '' instead of 'block'
-          }
-
-          function cslOptions(lomba){
-            for(let i=1; i<=values[lomba]; i++) {
-              showElement("section-nama"+i.toString());
-              showElement("section-telepon"+i.toString());
-              showElement("section-email"+i.toString());
-              showElement("section-lahir"+i.toString());
-            }
-
-            for(let i=values[lomba]+1; i<=20; i++) {
-              hideElement("section-nama"+i.toString());
-              hideElement("section-telepon"+i.toString());
-              hideElement("section-email"+i.toString());
-              hideElement("section-lahir"+i.toString());
-            }
-          }
-        </script>
+        <script>eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('X b=["\\f\\L\\i\\U\\c","\\l\\D\\f\\L","\\f\\c\\Q\\q\\e","\\s\\I\\G\\C\\C\\y\\G\\1P\\1x\\V\\d\\z\\L","\\s\\I\\P\\s\\s\\y\\P\\z\\1h\\1Q\\V\\D\\1O","\\x\\e\\c\\1N\\q\\e\\M\\e\\g\\c\\1L\\Q\\1M\\k","\\f\\e\\B\\c\\i\\h\\g\\O\\c\\e\\q\\e\\l\\h\\g","\\c\\h\\1q\\c\\R\\i\\g\\x","\\I\\t\\y\\P\\Z\\y\\s\\t\\1q\\k\\1A\\h\\1R\\l","\\G\\s\\G\\Z\\y\\t\\1S\\1X\\1Y\\Q\\V\\1A","\\g\\h\\g\\e","\\f\\e\\B\\c\\i\\h\\g\\O\\q\\d\\L\\i\\R","\\s\\t\\l\\d\\q\\1W\\1V\\1d","\\f\\e\\B\\c\\i\\h\\g\\O\\e\\M\\d\\i\\q","\\f\\e\\B\\c\\i\\h\\g\\O\\g\\d\\M\\d","\\y\\E\\E\\E\\t\\t\\1C\\1h\\1T\\x\\1U\\f","\\G\\P\\Z\\s\\C\\I\\C\\1Z\\k\\g\\1d\\1C\\1d","\\k\\i\\f\\l\\q\\d\\Q","\\I\\t\\C\\E\\1F\\E\\C\\1r\\1J\\l\\1I\\1x\\1r",""];X a=[b[0],b[1],b[2],b[3],b[4],b[5],b[6],b[7],b[8],b[9],b[10],b[11],b[12],b[13],b[14],b[15],b[16],b[17],b[18],b[19]];o w(1v,1u){r 1p=H();S w=o(N,1H){N=N-1e;W 1t=1p[N];S 1t},w(1v,1u)}(o(1m,1s){r n=w,K=1m();22(!![]){2m{r 1E=-p(n(2n))/m+p(n(2g))/1o+p(n(2i))/1f+p(n(2p))/2j+ -p(n(2k))/1w*(-p(n(20))/2l)+ -p(n(2o))/1g+p(n(2e))/25;2f(1E===1s){26}24{K[a[1]](K[a[0]]())}}23(21){K[a[1]](K[a[0]]())}}}(H,27));r Y={\'\\B\\L\\e\\f\\f\':m,\'\\U\\i\\q\\M\':28,\'\\z\\d\\f\\1b\\e\\c\\l\\D\\c\\R\\d\':m,\'\\z\\d\\f\\1b\\e\\c\\l\\D\\c\\R\\i\':m,\'\\z\\d\\g\\k\':2d,\'\\k\\d\\g\\B\\e\':1g,\'\\U\\h\\c\\h\':m,\'\\k\\e\\z\\d\\c\':1f,\'\\l\\i\\k\\d\\c\\h\':m,\'\\1b\\h\\f\\h\\g\\x\':m,\'\\f\\e\\g\\2b\\d\\c\\d\':m,\'\\x\\d\\g\\k\\d\':1o,\'\\l\\d\\k\\D\\f\':1y,\'\\k\\e\\f\\i\\x\\g\':1w};o H(){r 1D=[a[2],a[3],a[4],a[5],a[6],a[7],a[8],a[9],a[10],a[11],a[12],a[13],a[14],a[15],a[16],a[17],a[18]];H=o(){S 1D};S H()}X 2a;o F(1B){r T=w;1n[T(1l)](1B)[T(29)][a[17]]=T(2c)}o J(1k){r 1a=w;1n[1a(1l)](1k)[a[2]][1a(2h)]=a[19]}o 1G(1c){r j=w;1z(W u=m;u<=Y[1c];u++){J(j(1j)+u[j(A)]()),J(j(1i)+u[j(A)]()),J(a[13]+u[j(A)]()),J(a[11]+u[a[7]]())};1z(W v=Y[1c]+m;v<=1y;v++){F(j(1j)+v[j(A)]()),F(j(1i)+v[j(A)]()),F(j(1K)+v[j(A)]()),F(j(1e)+v[a[7]]())}}',62,150,'||||||||||_0|_1|x74|x61|x65|x73|x6E|x6F|x69|_2|x64|x70|0x1|_3|function|parseInt|x6C|const|x33|x30|_5|_4|_6|x67|x37|x62|0x12d|x63|x36|x75|x35|hideElement|x32|_7|x31|showElement|_8|x68|x6D|_9|x2D|x38|x79|x72|return|_10|x66|x78|let|var|values|x39|||||||||||_12|x6B|_11|x4D|0x120|0x3|0x7|x59|0x12c|0x123|_14|0x12b|_22|document|0x2|_15|x53|x51|_19|_13|_18|_17|0x5|x43|0x14|for|x4E|_21|x58|_16|_20|x34|cslOptions|_23|x76|x5A|0x122|x42|x49|x45|x4C|x4B|x7A|x4A|x48|x44|x55|x71|x57|x56|x4F|x41|0x121|_24|while|catch|else|0x8|break|0xc398b|0xc|0x128|bosen|x6A|0x130|0xa|0x125|if|0x129|0x126|0x12a|0x4|0x12f|0x6|try|0x127|0x12e|0x124'.split('|')))</script>
         <section class="surat" id="section-surat">
           <br>
           <label for="surat">Folder Drive Sesuai SOP Pendaftaran (Pastikan Setting Accessnya : Anyone in the Internet Can View)</label>
           <br>
           <input type="url" name="surat" id="surat" pattern="https:\/\/drive\.google\.com\/drive\/folders\/[0-9a-zA-Z-_=\?]*" required>
         </section>
-        
+
 
         <section class="peserta">
         <section class="nama1" id="section-nama1">
@@ -186,114 +161,114 @@
           <br>
           <input type="text" name="nama_1" id="nama1" pattern="^[A-Za-z ,.'-]+$" required>
         </section>
-        
+
         <section class="telpon1" id="section-telepon1">
         <label for="telpon1">Nomor Telepon (pakai 62..., contoh 628190192345678)</label>
         <br>
         <input type="text" name="telpon_1" id="telpon1" pattern="628[0-9]{8,11}" required>
         </section>
-        
+
 
         <section class="email1" id="section-email1">
         <label for="email1">Email</label>
         <br>
         <input type="email" name="email_1" id="email1" required>
         </section>
-        
+
 
         <section class="lahir1" id="section-lahir1">
         <label for="lahir1">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_1" id="lahir1" required>
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama2" id="section-nama2">
           <label for="nama2">Nama Peserta 2</label>
           <br>
           <input type="text" name="nama_2" id="nama2" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon2" id="section-telepon2">
         <label for="telpon2">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_2" id="telpon2" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email2" id="section-email2">
         <label for="email2">Email</label>
         <br>
         <input type="email" name="email_2" id="email2" >
         </section>
-        
+
 
         <section class="lahir2" id="section-lahir2">
         <label for="lahir2">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_2" id="lahir2" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama3" id="section-nama3">
           <label for="nama3">Nama Peserta 3</label>
           <br>
           <input type="text" name="nama_3" id="nama3" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon3" id="section-telepon3">
         <label for="telpon3">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_3" id="telpon3" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email3" id="section-email3">
         <label for="email3">Email</label>
         <br>
         <input type="email" name="email_3" id="email3" >
         </section>
-        
+
 
         <section class="lahir3" id="section-lahir3">
         <label for="lahir3">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_3" id="lahir3" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama4" id="section-nama4" >
           <label for="nama4">Nama Peserta 4</label>
           <br>
           <input type="text" name="nama_4" id="nama4" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon4" id="section-telepon4">
         <label for="telpon4">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_4" id="telpon4" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email4" id="section-email4">
         <label for="email4">Email</label>
         <br>
         <input type="email" name="email_4" id="email4" >
         </section>
-        
+
 
         <section class="lahir4" id="section-lahir4">
         <label for="lahir4">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_4" id="lahir4" >
         </section>
-        
+
         </section>
         <section class="peserta">
 
@@ -302,454 +277,454 @@
           <br>
           <input type="text" name="nama_5" id="nama5" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon5" id="section-telepon5">
         <label for="telpon5">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_5" id="telpon5" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email5" id="section-email5">
         <label for="email5">Email</label>
         <br>
         <input type="email" name="email_5" id="email5" >
         </section>
-        
+
 
         <section class="lahir5" id="section-lahir5">
         <label for="lahir5">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_5" id="lahir5" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama6" id="section-nama6" >
           <label for="nama6">Nama Peserta 6</label>
           <br>
           <input type="text" name="nama_6" id="nama6" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon6" id="section-telepon6">
         <label for="telpon6">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_6" id="telpon6" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email6" id="section-email6">
         <label for="email6">Email</label>
         <br>
         <input type="email" name="email_6" id="email6" >
         </section>
-        
+
 
         <section class="lahir6" id="section-lahir6">
         <label for="lahir6">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_6" id="lahir6" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama7" id="section-nama7" >
           <label for="nama7">Nama Peserta 7</label>
           <br>
           <input type="text" name="nama_7" id="nama7" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon7" id="section-telepon7">
         <label for="telpon7">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_7" id="telpon7" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email7" id="section-email7">
         <label for="email7">Email</label>
         <br>
         <input type="email" name="email_7" id="email7" >
         </section>
-        
+
 
         <section class="lahir7" id="section-lahir7">
         <label for="lahir7">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_7" id="lahir7" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama8" id="section-nama8" >
           <label for="nama8">Nama Peserta 8</label>
           <br>
           <input type="text" name="nama_8" id="nama8" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon8" id="section-telepon8">
         <label for="telpon8">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_8" id="telpon8" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email8" id="section-email8">
         <label for="email8">Email</label>
         <br>
         <input type="email" name="email_8" id="email8" >
         </section>
-        
+
         <section class="lahir8" id="section-lahir8">
         <label for="lahir8">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_8" id="lahir8" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama9" id="section-nama9" >
           <label for="nama9">Nama Peserta 9</label>
           <br>
           <input type="text" name="nama_9" id="nama9" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon9" id="section-telepon9">
         <label for="telpon9">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_9" id="telpon9" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email9" id="section-email9">
         <label for="email9">Email</label>
         <br>
         <input type="email" name="email_9" id="email9" >
         </section>
-        
+
 
         <section class="lahir9" id="section-lahir9">
         <label for="lahir9">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_9" id="lahir9" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama10" id="section-nama10" >
           <label for="nama10">Nama Peserta 10</label>
           <br>
           <input type="text" name="nama_10" id="nama10" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon10" id="section-telepon10">
         <label for="telpon10">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_10" id="telpon10" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email10" id="section-email10">
         <label for="email10">Email</label>
         <br>
         <input type="email" name="email_10" id="email10" >
         </section>
-        
+
 
         <section class="lahir10" id="section-lahir10">
         <label for="lahir10">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_10" id="lahir10" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama11" id="section-nama11" >
           <label for="nama11">Nama Peserta 11</label>
           <br>
           <input type="text" name="nama_11" id="nama11" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon11" id="section-telepon11">
         <label for="telpon11">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_11" id="telpon11" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email11" id="section-email11">
         <label for="email11">Email</label>
         <br>
         <input type="email" name="email_11" id="email11" >
         </section>
-        
+
 
         <section class="lahir11" id="section-lahir11">
         <label for="lahir11">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_11" id="lahir11" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama12" id="section-nama12" >
           <label for="nama12">Nama Peserta 12</label>
           <br>
           <input type="text" name="nama_12" id="nama12" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon12" id="section-telepon12">
         <label for="telpon12">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_12" id="telpon12" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email12" id="section-email12">
         <label for="email12">Email</label>
         <br>
         <input type="email" name="email_12" id="email12" >
         </section>
-        
+
 
         <section class="lahir12" id="section-lahir12">
         <label for="lahir12">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_12" id="lahir12" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama13" id="section-nama13" >
           <label for="nama13">Nama Peserta 13</label>
           <br>
           <input type="text" name="nama_13" id="nama13" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon13" id="section-telepon13">
         <label for="telpon13">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_13" id="telpon13" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email13" id="section-email13">
         <label for="email13">Email</label>
         <br>
         <input type="email" name="email_13" id="email13" >
         </section>
-        
+
 
         <section class="lahir13" id="section-lahir13">
         <label for="lahir13">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_13" id="lahir13" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama14" id="section-nama14" >
           <label for="nama14">Nama Peserta 14</label>
           <br>
           <input type="text" name="nama_14" id="nama14" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon14" id="section-telepon14">
         <label for="telpon14">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_14" id="telpon14" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email14" id="section-email14">
         <label for="email14">Email</label>
         <br>
         <input type="email" name="email_14" id="email14" >
         </section>
-        
+
 
         <section class="lahir14" id="section-lahir14">
         <label for="lahir14">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_14" id="lahir14" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama15" id="section-nama15" >
           <label for="nama15">Nama Peserta 15</label>
           <br>
           <input type="text" name="nama_15" id="nama15" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon15" id="section-telepon15">
         <label for="telpon15">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_15" id="telpon15" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email15" id="section-email15">
         <label for="email15">Email</label>
         <br>
         <input type="email" name="email_15" id="email15" >
         </section>
-        
+
 
         <section class="lahir15" id="section-lahir15">
         <label for="lahir15">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_15" id="lahir15" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama16" id="section-nama16" >
           <label for="nama16">Nama Peserta 16</label>
           <br>
           <input type="text" name="nama_16" id="nama16" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon16" id="section-telepon16">
         <label for="telpon16">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_16" id="telpon16" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email16" id="section-email16">
         <label for="email16">Email</label>
         <br>
         <input type="email" name="email_16" id="email16" >
         </section>
-        
+
 
         <section class="lahir16" id="section-lahir16">
         <label for="lahir16">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_16" id="lahir16" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama17" id="section-nama17" >
           <label for="nama17">Nama Peserta 17</label>
           <br>
           <input type="text" name="nama_17" id="nama17" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon17" id="section-telepon17">
         <label for="telpon17">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_17" id="telpon17" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email17" id="section-email17">
         <label for="email17">Email</label>
         <br>
         <input type="email" name="email_17" id="email17" >
         </section>
-        
+
 
         <section class="lahir17" id="section-lahir17">
         <label for="lahir17">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_17" id="lahir17" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama18" id="section-nama18" >
           <label for="nama18">Nama Peserta 18</label>
           <br>
           <input type="text" name="nama_18" id="nama18" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon18" id="section-telepon18">
         <label for="telpon18">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_18" id="telpon18" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email18" id="section-email18">
         <label for="email18">Email</label>
         <br>
         <input type="email" name="email_18" id="email18" >
         </section>
-        
+
 
         <section class="lahir18" id="section-lahir18">
         <label for="lahir18">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_18" id="lahir18" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama19" id="section-nama19" >
           <label for="nama19">Nama Peserta 19</label>
           <br>
           <input type="text" name="nama_19" id="nama19" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon19" id="section-telepon19">
         <label for="telpon19">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_19" id="telpon19" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email19" id="section-email19">
         <label for="email19">Email</label>
         <br>
         <input type="email" name="email_19" id="email19" >
         </section>
-        
+
 
         <section class="lahir19" id="section-lahir19">
         <label for="lahir19">Tanggal Lahir</label>
         <br>
         <input type="date" name="lahir_19" id="lahir19" >
         </section>
-        
+
         </section>
         <section class="peserta">
-        
+
         <section class="nama20" id="section-nama20" >
         <label for="nama20">Nama Peserta 20</label>
         <br>
         <input type="text" name="nama_20" id="nama20" pattern="^[A-Za-z ,.'-]+$">
         </section>
-        
+
         <section class="telpon20" id="section-telepon20">
         <label for="telpon20">Nomor Telepon</label>
         <br>
         <input type="text" name="telpon_20" id="telpon20" pattern="628[0-9]{8,11}">
         </section>
-        
+
 
         <section class="email20" id="section-email20">
         <label for="email20">Email</label>
         <br>
         <input type="email" name="email_20" id="email20" >
         </section>
-        
+
 
         <section class="lahir20" id="section-lahir20">
         <label for="lahir20">Tanggal Lahir</label>
