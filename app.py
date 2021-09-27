@@ -1422,7 +1422,7 @@ def team():
     return render_template('team.html')
 
 @app.route('/syarat', methods=['GET'])
-def team():
+def syarat():
     return render_template('sop.html')
 
 if __name__ == "__main__":
