@@ -304,11 +304,11 @@ table {
 }
 
 iframe {
-  height: 88vh;
-  width: 100vw;
+  height: 85vh;
+  min-width: 100vw;
   position: absolute;
-  margin-top: -6vh;
   z-index: 0;
+  margin-top: -3vh;
 }
 
 #FormPendaf {
@@ -340,4 +340,10 @@ button {
   color: white;
   font-family: 'Roboto';
   font-size: 20px;
+}
+
+.heading {
+  font-size: 40px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bolder;
 }
