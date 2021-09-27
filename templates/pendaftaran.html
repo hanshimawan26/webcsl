@@ -13,10 +13,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="google" content="notranslate">
     <title>PDF.js viewer</title>
-    <link rel="stylesheet" href="https://mozilla.github.io/pdf.js/web/viewer.css">
-    <link rel="resource" type="application/l10n" href="https://mozilla.github.io/pdf.js/web/locale/locale.properties">
-    <script src="https://mozilla.github.io/pdf.js/build/pdf.js">
-    <script src="https://mozilla.github.io/pdf.js/web/viewer.js" type="module-shim"></script>
+    <link rel="stylesheet" href="viewer.css">
+    <link rel="resource" type="application/l10n" href="locale/locale.properties">
+    <script defer src="../node_modules/es-module-shims/dist/es-module-shims.js"></script>
+    <script type="importmap-shim">
+      {
+        "imports": {
+          "pdfjs/": "../src/",
+          "pdfjs-lib": "../src/pdf.js",
+          "pdfjs-web/": "./"
+        }
+      }
+    </script>
+    <script src="viewer.js" type="module-shim"></script>
 {% endblock head %}
 {% block title %} Canisius Super League {% endblock %}
 {% block content %}<html dir="ltr" mozdisallowselectionprint>
