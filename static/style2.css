@@ -312,3 +312,28 @@ table {
   font-size: 25px;
   color: #0d0d31;
 }
+
+iframe {
+  height: 88vh;
+  width: 100vw;
+  margin-bottom: 0;
+  z-index: 1;
+}
+
+#soppendaf {
+  position: absolute;
+  margin-top: -6vh;
+}
+
+#buttonpendaf {
+  position: fixed;
+  width: 100vw;
+  height: 5vh;
+  background-color: greenyellow;
+  color: white;
+  font-size: 40px;
+  padding: auto;
+  font-weight: bold;
+  z-index: 1;
+  display:box;
+}

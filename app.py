@@ -5,12 +5,9 @@ from datetime import datetime
 from datetime import timedelta
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
-#from werkzeug.datastructures import FileStorage
-#from werkzeug.utils import secure_filename
 import os
 import random
 import string
-#from waitress import serve
 
 app = Flask(__name__)
 app.secret_key = 'xcvbnm,cvbnm,dcvfbgnhmj,kcvbnm,dcvfbghnmj'
@@ -18,9 +15,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pendaf.sqlite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 context = ssl.SSLContext()
 context.load_cert_chain('/root/webcsl/fullchain.pem', '/root/webcsl/privkey.pem')
-#UPLOAD_FOLDER = 'files'
-#ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg'}
-#app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 db = SQLAlchemy(app)
 global pwd_input
@@ -1429,6 +1423,10 @@ def team():
 @app.route('/syarat', methods=['GET'])
 def syarat():
     return render_template('sop.html')
+
+@app.route('/pendaftaran', methods=['GET'])
+def pendaftaran():
+    return render_template('pendaftaran.html')
 
 if __name__ == "__main__":
     db.create_all()

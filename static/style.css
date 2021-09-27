@@ -56,6 +56,9 @@ form hr {
 
 h1 {
   text-align: center;
+  font-family: 'Berkshire Swash';
+  font-style: italic;
+  font-size: 35px;
 }
 
 #logo {
@@ -156,10 +159,78 @@ p {
 .option {
   margin-top: 1vh;
   height: auto;
-  max-width: 500px;
-  background-color: rgb(2, 95, 95);
-  color: white;
+  max-width: 700px;
+  background-color: rgb(255, 255, 255);
+  color: whitesmoke;
   border-radius: 20px;
   padding: 5px 1vw 5px 1vw;
+}
+
+.option label {
+  font-size: 25px;
+  line-height: 2;
+  color: black;
+}
+
+span {
+  font-size: 25px;
+  line-height: 2;
+  font-family: 'Roboto';
+}
+
+label {
+  font-size: 25px;
+  font-family: 'Roboto';
+  line-height: 2;
+}
+
+input[type=text] {
+  width: 45%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
   font-size: 20px;
+  font-family: 'Roboto';
+}
+
+input[type=url] {
+  width: 45%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'Roboto';
+}
+
+input[type=email] {
+  width: 45%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'Roboto';
+}
+
+input[type=date] {
+  width: 45%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'Roboto';
+}
+
+#tim {
+  width: 45%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'Roboto';
+}
+
+.submission {
+  margin-top: 5vh;
+  width: auto;
+  text-align:center;
 }

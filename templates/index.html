@@ -41,19 +41,18 @@
       <form action="/pendaf" method="POST" enctype="multipart/form-data">
         <h1>Pendaftaran Lomba</h1>
         <section class="sekolah">
-          <label for="sekolah">Sekolah : </label> 
+          <label for="sekolah">Sekolah</label> <br>
           <input type="text" name="sekolah" id="sekolah" required>
         </section>
 
 
         <section class="namakelompok">
-          <span>Tim     : </span>
-          <input list="user" name="user">
-          <datalist id="user">
-            <option value="A">
-            <option value="B">
-            <option value="C">
-          </datalist>
+          <label for="tim">Tim     : </label><br>
+          <select id="tim" name="user" required>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
         </section>
 
 
@@ -733,12 +732,10 @@
         </section>
         </section>
 
-        <section class="peserta">
+        <section class="submission">
         <h3>Pastikan Semua Data Sudah Benar Sebelum Submit</h3>
         <br>
-        <section class="submission">
         <input type="submit" id="submit" name = "submit" value="Submit">
-        </section>
         </section>
       </form>
     </section>
