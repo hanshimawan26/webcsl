@@ -31,9 +31,9 @@ function close(){
   </head>
   <body>
     <section class=header>
-      <a href="#" class="nav-logo">
+      <div class="logo"><a href="#" class="nav-logo">
         <img width:100% src="{{url_for('static', filename='Artboard 1.png')}}" alt="Logo Canisius Super League" class="logo">
-      </a>
+        </a></div>
       <nav class="navbar">
         <div class="openMenu"><i class="fa fa-bars"></i></div>
         <ul class="mainMenu">
@@ -49,6 +49,7 @@ function close(){
             <li class="nav-item">
                 <a href="/syarat" class="nav-link">SOP</a>
             </li>
+          <div class="closeMenu"><i class="fa fa-times"></i></div>
         </ul>
       </nav>
     </section>
