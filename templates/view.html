@@ -1,5 +1,21 @@
 {% extends "base.html" %}
 {% block title %} View Data {% endblock %}
+{% block head %}
+<style>
+    @media screen and (max-width: 800px) {
+        #dataumum {
+            border-radius: 0;
+            width: 100%;
+            margin: 1vh 0 0 0;
+        }
+        .peserta {
+            border-radius: 0;
+            width: 100%;
+            margin: 1vh 0 0 0;
+        }
+    }
+</style>
+{% endblock %}
 {% block content %}
     <div id = "dataumum">
         <h4>Kode Peserta      : {{item.kodepeserta_data}}</h4>

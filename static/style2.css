@@ -121,11 +121,11 @@ p {
 }
 
 #dataumum {
-  width: 60%;
+  width: 80%;
   border-radius: 10px;
   margin-top: 3vh;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
   background-color: rgb(255, 255, 255);
   padding: 20px 20px 20px 20px;
   color:rgb(83, 83, 83);
@@ -133,11 +133,11 @@ p {
 }
 
 .peserta {
-  width: 60%;
+  width: 80%;
   border-radius: 10px;
   margin-top: 1vh;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
   background-color: rgb(255, 255, 255);
   padding: 20px 20px 20px 20px;
   color:rgb(83, 83, 83);
@@ -253,7 +253,7 @@ h2 {
 }
 
 li {
-  margin-left: 5vw;
+  margin-left: 0;
 }
 
 h3 {
@@ -322,20 +322,6 @@ iframe {
   float: center;
 }
 
-button {
-  margin-top: 10px;
-  width: 50vw;
-  height: 5vh;
-  background-color: rgb(81, 205, 50);
-  border-radius: 20px;
-  border-color: white;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  border-left: 1px solid;
-  border-right: 1px solid;
-  border-color: white;
-}
-
 #pendaf {
   color: white;
   font-family: 'Roboto';
@@ -346,4 +332,18 @@ button {
   font-size: 40px;
   font-family: 'Rubik', sans-serif;
   font-weight: bolder;
+}
+
+#my_pdf_viewer {
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#canvas_container {
+  width: 100%;
+}
+
+#pdf_renderer {
+  width: 100%;
 }

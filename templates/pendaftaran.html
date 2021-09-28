@@ -4,17 +4,64 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js">
 </script>
 <style>
-  body {
-    overflow-y: hidden;
-  }
-  #canvas_container {
-    width: 800px;
-    height: 450px;
-    overflow: auto;
-    background: #333;
-    text-align: center;
-    border: solid 3px;
-  }
+    #my_pdf_viewer {
+        text-align: center;
+    }
+
+    #canvas_container {
+        overflow: auto;
+        background: rgb(31, 31, 31);
+        text-align: center;
+        border: solid 3px;
+    }
+    button {
+        border: 1px solid white;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        font-family: "Verdana", sans-serif;
+        background-color: gray;
+    }
+    button:hover {
+        background-color: white;
+        opacity: 1;
+        color:rgb(83, 83, 83);
+    }
+    
+    #go_previous {
+        width: 39.5%;
+        height: 10vh;
+        margin: 0;
+        font-size: 20px;
+    }
+    
+    #go_next {
+        width: 39.5%;
+        height: 10vh;
+        margin: 0;
+        font-size: 20px;
+    }
+    #current_page {
+        width: 20.25%;
+        margin: 0;
+        text-align: center;
+        height: 10vh;
+        font-size: 30px;
+    }
+
+    #zoom_controls {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #zoom_controls button {
+        width: 49.8%;
+        text-align: center;
+        font-size: 20px;
+    }
 </style>
 {% endblock head %}
 {% block title %} Canisius Super League {% endblock %}
