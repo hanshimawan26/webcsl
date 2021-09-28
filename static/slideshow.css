@@ -1,5 +1,10 @@
 * {box-sizing:border-box}
 
+#slideshow {
+  width: 100%;
+  background-color: transparent;
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;

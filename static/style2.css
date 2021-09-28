@@ -129,7 +129,8 @@ p {
   background-color: rgb(255, 255, 255);
   padding: 20px 20px 20px 20px;
   color:rgb(83, 83, 83);
-  opacity: 0.8
+  opacity: 0.8;
+  font-family: 'Roboto';
 }
 
 .peserta {
@@ -141,7 +142,8 @@ p {
   background-color: rgb(255, 255, 255);
   padding: 20px 20px 20px 20px;
   color:rgb(83, 83, 83);
-  opacity: 0.8
+  opacity: 0.8;
+  font-family: 'Roboto';
 }
 
 h2 {
@@ -236,10 +238,11 @@ h2 {
   font-size: 20px;
   font-family: 'Roboto';  
   margin-top: 0;
+  overflow-x: hidden;
 }
 
 .subtitle {
-  margin-top: 5vh;
+  margin-top: 8vh;
   text-align: center;
   width: 100vw;
   padding: 1vh 15vw 1vh 15vw;
@@ -347,4 +350,40 @@ iframe {
 
 #pdf_renderer {
   width: 100%;
+}
+
+#daftar {
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  padding: 1vh 35vw;
+}
+
+.button_link {
+  padding: 20px 30px;
+  border: 1px solid white;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.397);
+}
+
+.button_link:hover {
+  padding: 20px 30px;
+  border: 1px solid #0d0d31;
+  margin-top: 10px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: #0d0d31;
+}
+
+@media screen and (max-width: 800px) {
+  #daftar {
+    padding: 1vh 0;
+  }
+}
+
+.social {
+  max-height: 5vh;
+  min-height: 50px;
 }

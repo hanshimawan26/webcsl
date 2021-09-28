@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %} Contact Us {% endblock %}
+{% block head %}
+<style>
+    #overlay {
+        text-align: center;
+    }
+    .button_link {
+        padding: 20px 30px;
+        border: 1px solid white;
+        margin-top: 10px;
+        width: 80vw;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.397);
+        float: center;
+    }
+    .contacts {
+        width: 100%;
+        text-align: center;
+        padding: 1vh 10vw 1vh 10vw;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<section class="contacts">
+    <h2>Seksi Pendaftaran</h2>
+    <a href="https://api.whatsapp.com/send/?phone=6281717882588&text&app_absent=0"><h4 class="button_link" target="_blank">Nathan Allan (+62 817-1788-2588)</h4></a>
+    <br>
+    <h2>Koordinator Seluruh Bidang Perlombaan</h2>
+    <a href="https://api.whatsapp.com/send/?phone=6281388577885&text&app_absent=0"><h4 class="button_link" target="_blank">Hans Joseph Himawan (+62 813-8857-7885)</h4></a>
+</section>
+{% endblock %}
