@@ -234,7 +234,7 @@ h2 {
   color:rgb(0, 21, 112);
   padding: 2vh 2vw 2vh 2vw;
   font-size: 20px;
-  font-family: Rubik, Arial;
+  font-family: 'Roboto';  
   margin-top: 0;
 }
 
@@ -253,7 +253,7 @@ h2 {
 }
 
 li {
-  margin-left: 3vw;
+  margin-left: 5vw;
 }
 
 h3 {
