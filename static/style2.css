@@ -239,6 +239,7 @@ h2 {
 }
 
 .subtitle {
+  margin-top: 5vh;
   text-align: center;
   width: 100vw;
   padding: 1vh 15vw 1vh 15vw;
