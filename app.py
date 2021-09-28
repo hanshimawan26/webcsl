@@ -695,35 +695,6 @@ def index():
         biayapeserta_data = ""
         verifikasi_data = "BELUM"
 
-        if cabang_data == "chess" :
-            catur_kuota = 1
-        elif cabang_data == "film" :
-            film_kuota = 1
-        elif cabang_data == "basketputra" :
-            basketputra_kuota = 1
-        elif cabang_data == "basketputri" :
-            basketputri_kuota = 1
-        elif cabang_data == "band" :
-            band_kuota = 1
-        elif cabang_data == "dance" :
-            dance_kuota = 1
-        elif cabang_data == "foto" :
-            foto_kuota = 1
-        elif cabang_data == "debat" :
-            debat_kuota = 1
-        elif cabang_data == "pidato" :
-            pidato_kuota = 1
-        elif cabang_data == "kosong" :
-            kosong_kuota = 1
-        elif cabang_data == "senjata" :
-            senjata_kuota = 1
-        elif cabang_data == "ganda" :
-            ganda_kuota = 1
-        elif cabang_data == "padus" :
-            padus_kuota = 1
-        elif cabang_data == "design" :
-            design_kuota = 1
-
         print('berhasil')
         print(sekolah_data, user_data, cabang_data, suratketerangan_data, nama_1_data, telpon_1_data, email_1_data, lahir_1_data)
         global datapeserta
@@ -890,6 +861,66 @@ def admin():
             return redirect (url_for('admin'))
         else:
             user.verifikasi_data = verify
+            if verify == "SUDAH":
+                if user.cabang_data == "chess" :
+                    user.catur_kuota = 1
+                elif user.cabang_data == "film" :
+                    user.film_kuota = 1
+                elif user.cabang_data == "basketputra" :
+                    user.basketputra_kuota = 1
+                elif user.cabang_data == "basketputri" :
+                    user.basketputri_kuota = 1
+                elif user.cabang_data == "band" :
+                    user.band_kuota = 1
+                elif user.cabang_data == "dance" :
+                    user.dance_kuota = 1
+                elif user.cabang_data == "foto" :
+                    user.foto_kuota = 1
+                elif user.cabang_data == "debat" :
+                    user.debat_kuota = 1
+                elif user.cabang_data == "pidato" :
+                    user.pidato_kuota = 1
+                elif user.cabang_data == "kosong" :
+                    user.kosong_kuota = 1
+                elif user.cabang_data == "senjata" :
+                    user.senjata_kuota = 1
+                elif user.cabang_data == "ganda" :
+                    user.ganda_kuota = 1
+                elif user.cabang_data == "padus" :
+                    user.padus_kuota = 1
+                elif user.cabang_data == "design" :
+                    user.design_kuota = 1
+
+            elif verify == "BELUM":
+                if user.cabang_data == "chess" :
+                    user.catur_kuota = 0
+                elif user.cabang_data == "film" :
+                    user.film_kuota = 0
+                elif user.cabang_data == "basketputra" :
+                    user.basketputra_kuota = 0
+                elif user.cabang_data == "basketputri" :
+                    user.basketputri_kuota = 0
+                elif user.cabang_data == "band" :
+                    user.band_kuota = 0
+                elif user.cabang_data == "dance" :
+                    user.dance_kuota = 0
+                elif user.cabang_data == "foto" :
+                    user.foto_kuota = 0
+                elif user.cabang_data == "debat" :
+                    user.debat_kuota = 0
+                elif user.cabang_data == "pidato" :
+                    user.pidato_kuota = 0
+                elif user.cabang_data == "kosong" :
+                    user.kosong_kuota = 0
+                elif user.cabang_data == "senjata" :
+                    user.senjata_kuota = 0
+                elif user.cabang_data == "ganda" :
+                    user.ganda_kuota = 0
+                elif user.cabang_data == "padus" :
+                    user.padus_kuota = 0
+                elif user.cabang_data == "design" :
+                    user.design_kuota = 0
+
             db.session.commit()
             return redirect (url_for('edited'))
 
