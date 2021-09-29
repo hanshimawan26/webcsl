@@ -1,0 +1,27 @@
+#Timer-Section {
+  margin-top: 0;
+  background-image: url('\ 4.png');
+  margin-bottom: 0;
+  height: 1080px;
+  padding-top: 100px;
+}
+#slideshow {
+  margin-top: 0;
+  background-image: url('\ 3.png');
+  height: 1080px;
+  padding-top: 150px;
+}
+#daftar {
+  margin-top: 0;
+  background-image: url('\ 2.png');
+  height: 1080px;
+  padding-top: 100px;
+}
+
+#overlay {
+  padding-top: 0;
+}
+
+h1 {
+  font-size: 40px;
+}

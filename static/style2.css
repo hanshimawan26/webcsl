@@ -361,20 +361,18 @@ iframe {
 
 .button_link {
   padding: 20px 30px;
-  border: 1px solid white;
   margin-top: 10px;
   width: 100%;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.397);
+  color: rgb(43, 43, 43);
+  background-color: rgb(255, 255, 255);
 }
 
 .button_link:hover {
   padding: 20px 30px;
-  border: 1px solid #0d0d31;
   margin-top: 10px;
   width: 100%;
-  background-color: rgb(255, 255, 255);
-  color: #0d0d31;
+  background-color: rgb(177, 177, 177);
+  color: #ffffff;
 }
 
 @media screen and (max-width: 800px) {

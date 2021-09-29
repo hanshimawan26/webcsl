@@ -936,6 +936,10 @@ def edited():
 def team():
     return render_template('team.html')
 
+@app.route('/about', methods=['GET'])
+def about():
+    return render_template('about.html')
+
 @app.route('/syarat', methods=['GET'])
 def syarat():
     return render_template('sop.html')

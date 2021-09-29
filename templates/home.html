@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% block head %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='homestyle.css')}}">
 {% endblock %}
 {% block title %} Canisius Super League {% endblock %}
 {% block content %}
   <div id="Timer-Section">
+    <h1>Canisius Super League Official Website</h1><br>
     <div id="Container-Timer">
       <p id="Coming-Soon">Coming Soon!</p>
       <p id="Title"></p>
@@ -40,7 +42,7 @@
   
       <div class="mySlides fade">
         <div class="numbertext">2 / 3</div>
-        <img src="{{url_for('static', filename='slide2.jpeg')}}" style="width:100%">
+        <img src="{{url_for('static', filename='slide1.png')}}" style="width:100%">
       </div>
   
       <div class="mySlides fade">
@@ -53,108 +55,9 @@
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
   </section>
-  <br>
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>  
-
   <section id="daftar">
+    <h1>Daftar</h1>
     <a href="https://youtu.be/zYpE_B1JUio" target="_blank"><h4 class="button_link">Tutorial Pendaftaran</h4></a>
-    <a href="/pendaf"><h4 class="button_link" target="_blank">Daftar</h4></a>
-  </section>
-  <section id="about">
-    <div class="subtitle">
-      <h1 class="heading">About Canisius Super League</h1>
-    </div>
-    <div id="namacsl" class="subsection"> 
-      <h3>Nama Kegiatan</h3>
-      <div class="isi">
-      <p>Canisius Super League terdiri dari 3 kata yaitu “Canisius”, “Super”, dan “League”. Lalu, apa pengertian dari 3 kata tersebut?</p>
-      <ol>
-        <li>Canisius merupakan nama sekolah yang akan menjadi tuan rumah dari kegiatan ini.</li>
-        <li>Super dimaksudkan untuk para peserta yang menjadi perwakilan sekolah untuk mengikuti kegiatan ini.</li>
-        <li>League berarti liga bagi peserta yang telah mendaftar dan berpartisipasi</li>
-      </ol>
-      </div>
-    </div>
-    <div id="tema" class="subsection">
-      <h3>Our Theme</h3>
-      <div class="isi">
-      <p><b>“HACIA LO DESCONOCIDO”</b>, yang menunjukkan bahwa kegiatan CSL adalah ajang untuk mencoba hal yang baru di masa pandemi, serta menjadi ajang untuk berkompetisi antar sekolah di seluruh Indonesia. Hal ini dilakukan dalam upaya meningkatkan kolaborasi, interaksi, dan melatih keberanian para siswa yang berpartisipasi dalam menghadapi tantangan yang baru.</p>
-      </div>
-    </div>
-    <div id="logocsl" class="subsection">
-      <h3>Our Logo</h3>
-      <div class="isi">
-        <p>Logo di atas memiliki beberapa komponen yang menarik untuk diketahui, antara lain:</p>
-      <ol>
-        <li>Kraken berwarna ungu: Kraken adalah binatang legenda yang menyerupai bentuk gurita yang sering tampak di lautan. Makhluk ini masih menjadi suatu misteri atau masih unknown sampai sekarang ini. Oleh karena itu, Kraken dipilih sebagai logo karena tema kegiatan ini adalah towards the unknown. Warna ungu dengan gradasi biru digunakan untuk menggambarkan sifat misterius atau unknown dari lautan dan Atlantis.</li>
-        <li>Trident atau trisula berwarna keemasan: trident atau trisula adalah senjata yang sering digunakan oleh Poseidon atau Neptune. Dalam dunia modern ini, mereka sering digambarkan sebagai tokoh fiksi yang terkenal yaitu Aquaman. Secara mitologis, senjata ini digunakan untuk menggambarkan kelautan. Namun, senjata tersebut kini seringkali dikaitkan dengan Atlantis karena digunakan oleh Aquaman dan tokoh atlantis lainnya.</li>
-      </ol>
-      </div>
-    </div>
-  </section>
-    <div class="isi" id="competitions">
-      <table>
-        <tr>
-          <td>
-            <a href="https://drive.google.com/file/d/1EuyAbsdcbhiMJWOPnfyiATlRWA2sqj10/view?usp=sharing"><img src="{{url_for('static', filename='chess (1).png')}}" class="icon"></a>
-            <h4>Chess League</h4>
-          </td>
-          <td>
-            <a href="#competitions"><img src="{{url_for('static', filename='Artboard 1.png')}}" class="icon"></a>
-          </td>
-          <td>
-            <a href="https://drive.google.com/file/d/1nNf_ET5aSnJ_JfLH5BaXICiEQ5DLenMU/view?usp=sharing"><img src="{{url_for('static', filename='film.png')}}" class="icon"></a>
-            <h4>Film Pendek</h4>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="https://drive.google.com/file/d/1hKW8p_lOo0W0SDY9K78kQDxgNTwuQL9i/view?usp=sharing"><img src="{{url_for('static', filename='basket.png')}}" class="icon"></a>
-            <h4>Basket Skills</h4>
-          </td>
-          <td>
-            <a href="https://drive.google.com/file/d/1ZdtFRphy5cubQwtj77ApZRpHOjErtty0/view?usp=sharing"><img src="{{url_for('static', filename='band.png')}}" class="icon"></a>
-            <h4>Band</h4>
-          </td>
-          <td>
-            <a href="https://drive.google.com/file/d/1NCBKcv1nY0QrDT8gaZ_TvuQAh0LGLRIi/view?usp=sharing"><img src="{{url_for('static', filename='dance.png')}}" class="icon"></a>
-            <h4>Modern Dance</h4>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="https://drive.google.com/file/d/1jqPJoLZwm7iQsNGK4xkUavfHI9-MgCjD/view?usp=sharing"><img src="{{url_for('static', filename='camera.png')}}" class="icon"></a>
-            <h4>Fotografi</h4>
-          </td>
-          <td>
-            <a href="https://drive.google.com/file/d/1curHRoQOwWRjggqJR4xyUEWa9NAlGaYE/view?usp=sharing"><img src="{{url_for('static', filename='debat.png')}}" class="icon"></a>
-            <h4>English Debate</h4>
-          </td>
-          <td>
-            <a href="https://drive.google.com/file/d/1m6bkqWHRdPdISit2OW_aOy777maN7ox5/view?usp=sharing"><img src="{{url_for('static', filename='pidato.png')}}" class="icon"></a>
-            <h4>Pidato</h4>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="https://drive.google.com/file/d/1i4rWNyWelg1iHpwsGXD0UaQwQvQdKvNU/view?usp=sharing"><img src="{{url_for('static', filename='silat.png')}}" class="icon"></a>
-            <h4>Pencak Silat</h4>
-          </td>
-          <td>
-            <a href="https://drive.google.com/file/d/1Or-sdwB0dQwYkjSqmlJ8N7ks_odufJFo/view?usp=sharing"><img src="{{url_for('static', filename='architect.png')}}" class="icon"></a>
-            <h4>Seaside House Design</h4>
-          </td>
-          <td>
-            <a href="https://drive.google.com/file/d/1M1EA496tH-xdSCkZkkb7KFFpNhb38F3I/view?usp=sharing"><img src="{{url_for('static', filename='choir.png')}}" class="icon"></a>
-            <h4>Paduan Suara</h4>
-          </td>
-        </tr>
-      </table>
-    </div>
+    <a href="/pendaf"><h4 class="button_link" target="_blank">Form Pendaftaran</h4></a>
   </section>
 {% endblock %}
