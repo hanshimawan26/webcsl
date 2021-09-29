@@ -46,10 +46,12 @@ var countDownDate = new Date("Oct 11, 2021 16:00:00").getTime();
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.getElementById("D").innerHTML = (days<10)? "0" + days : days;
-    document.getElementById("H").innerHTML = (hours<10)? "0" + hours : hours;
-    document.getElementById("M").innerHTML = (minutes<10)? "0" + minutes : minutes;
-    document.getElementById("S").innerHTML = (seconds<10)? "0" + seconds : seconds;
+    if(window.location.href == 'https://canisiussuperleague.id/') {
+      document.getElementById("D").innerHTML = (days<10)? "0" + days : days;
+      document.getElementById("H").innerHTML = (hours<10)? "0" + hours : hours;
+      document.getElementById("M").innerHTML = (minutes<10)? "0" + minutes : minutes;
+      document.getElementById("S").innerHTML = (seconds<10)? "0" + seconds : seconds;
+    }
     if (distance < 0) {
       clearInterval(x);
       document.getElementById("Title").innerHTML = "CSL Day "+ Math.abs(days);
