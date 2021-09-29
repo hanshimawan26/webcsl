@@ -1,27 +1,36 @@
 #Timer-Section {
-  margin-top: 0;
+  margin-top: -50px;
   background-image: url('\ 4.png');
   margin-bottom: 0;
   height: 1080px;
-  padding-top: 100px;
+  padding-top: 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 #slideshow {
   margin-top: 0;
   background-image: url('\ 3.png');
   height: 1080px;
   padding-top: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 #daftar {
   margin-top: 0;
   background-image: url('\ 2.png');
   height: 1080px;
   padding-top: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #overlay {
-  padding-top: 0;
+  padding-top: 100px;
 }
 
 h1 {
   font-size: 40px;
 }
+

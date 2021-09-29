@@ -1,8 +1,21 @@
 {% extends "base.html" %}
 {% block head %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='about.css')}}">
 <style>
   #teaser {
     width: 1000px;
+  }
+  body {
+    background-color: #C2C2C2;
+    background-image: None;
+  }
+  @media screen and (max-width: 800px) {
+    #overlay {
+      padding-top: 500px;
+    }
+    #about {
+      margin-top: -450px;
+    }
   }
 </style>
 {% endblock %}
