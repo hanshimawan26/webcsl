@@ -34,3 +34,12 @@ h1 {
   font-size: 40px;
 }
 
+h1, .textbutton{
+  animation: up 2s;
+}
+
+@keyframes up {
+  from {margin-top: 2000px;}
+  to {margin: 0;}
+}
+

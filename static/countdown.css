@@ -40,6 +40,8 @@
   width: 100vw;
   margin: 0 auto;
   text-align: center;
+  animation-name: kaminsun;
+  animation-duration: 2s;
 }
 #Timer-Section{
   width: 100%;
@@ -64,4 +66,9 @@
   letter-spacing: 20px;
   color: white;
   text-shadow: 0 0 1px #fff, 0 0 3px #fff;
+}
+
+@keyframes up {
+  from {margin-top: 2000px;}
+  to {margin: 0;}
 }
