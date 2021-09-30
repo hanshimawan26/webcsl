@@ -1,11 +1,19 @@
-#about {
+#cekdata {
   margin-top: 0;
-  background-image: url('\sea wallpaper2.png');
-  height: 5400px;
-  padding-top: 1400px;
+  background-image: url('\wallpaper_cekdata.png');
+  width: 1920px;
+  height: 1080px;
+  padding-top: 200px;
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 800px) {
+  #cekdata {
+    width: auto;
+    height: 1080px;
+  }
 }
 
 h1 {

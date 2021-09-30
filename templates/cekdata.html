@@ -1,6 +1,17 @@
 {% extends "base.html" %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='cekdata.css')}}">
+<style>
+  body {
+    background-color: black;
+    background-image: None;
+  }
+</style>
+{% endblock %}
 {% block title %} Cek Data {% endblock %}
 {% block content %}
+<section id="cekdata">
+    <h1>Cek Data</h1>
     <form action="/cekdata" method="POST">
         <section class="nomorpeserta">
             <label for="input">Nomor Peserta/Kelompok</label>
@@ -11,4 +22,5 @@
             <input type="submit" id="submit" name = "submit" value="Submit">
         </section>
     </form>
+</section>
 {% endblock %}

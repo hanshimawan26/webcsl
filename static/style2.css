@@ -307,14 +307,6 @@ table {
   color: #0d0d31;
 }
 
-iframe {
-  height: 85vh;
-  min-width: 100vw;
-  position: absolute;
-  z-index: 0;
-  margin-top: -3vh;
-}
-
 #FormPendaf {
   color: rgb(0, 0, 0);
   position: absolute;
