@@ -10,6 +10,7 @@ jangan lupa follow ig kita ya :)
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='daftar.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='navbar.css')}}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
@@ -18,6 +19,10 @@ jangan lupa follow ig kita ya :)
     <style>
       .peserta {
         margin-top: 5vh;
+      }
+      body {
+        background-image: None;
+        background-color: #4CA6C6;
       }
     </style>
   </head>
@@ -43,10 +48,13 @@ jangan lupa follow ig kita ya :)
       </div>
     </nav>
     <section id="overlay">
-      <form action="/pendaf" method="POST" enctype="multipart/form-data">
+      <section id="top"></section>
+      <section id="head">
         <h1>Pendaftaran Lomba</h1>
         <h2>Sebelum Daftar Mohon Baca <a href="/pendaftaran" target="_blank">SOP Pendaftaran</a> dan <a href="/syarat">SOP Lomba</a> Terlebih Dahulu</h2>
         <h2><a href="https://youtu.be/zYpE_B1JUio" target="_blank">Video Tutorial Pendaftaran</a></h2>
+      </section>
+      <form action="/pendaf" method="POST" enctype="multipart/form-data">
         <section class="sekolah">
           <label for="sekolah">Sekolah</label> <br>
           <input type="text" name="sekolah" id="sekolah" required>
@@ -745,6 +753,8 @@ jangan lupa follow ig kita ya :)
         <input type="submit" id="submit" name = "submit" value="Submit">
         </section>
       </form>
+      <section id="bottom">
+      </section>
     </section>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
   </body>

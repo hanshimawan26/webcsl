@@ -16,7 +16,6 @@ ul {
 }
 
 body {
-  background-image: url('\ atlantis background.png');
   background-size: cover;
   color: white;
   margin: 0;
@@ -229,7 +228,7 @@ input[type=date] {
 
 a {
   text-decoration: None;
-  color:rgb(159, 252, 244);
+  color:rgb(38, 0, 255);
   font-size: 25px;
   font-family: 'Roboto';
 }

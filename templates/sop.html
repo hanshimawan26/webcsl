@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% block head %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='sop.css')}}">
 <style>
+  body {
+    background-color: black;
+  }
   .heading {
     font-size: 60px;
     margin-top: 40px;

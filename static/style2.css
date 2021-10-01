@@ -204,58 +204,6 @@ h2 {
   }
 }
 
-#about {
-  margin-bottom: 5vh;
-}
-
-#about h2 {
-  text-align: center;
-  font-size: 30px;
-}
-
-.subsection {
-  width: 84vw;
-  margin: 5vh 8vw 0 8vw;
-  background-color: white;
-}
-
-.subsection h3 {
-  border-radius: 20px;
-  background-color: white;
-  color: black;
-  padding: 2vh 2vw 2vh 2vw;
-  text-align: left;
-  font-size: 30px;
-  font-family: Rubik, Arial;
-  margin-bottom:0;
-}
-
-.subsection .isi{
-  border-radius: 20px;
-  background-color: whitesmoke;
-  color:rgb(0, 21, 112);
-  padding: 2vh 2vw 2vh 2vw;
-  font-size: 20px;
-  font-family: 'Roboto';  
-  margin-top: 0;
-  overflow-x: hidden;
-}
-
-.subtitle {
-  margin-top: 8vh;
-  text-align: center;
-  width: 100vw;
-  padding: 1vh 15vw 1vh 15vw;
-}
-
-.subtitle h2 {
-  color:white;
-}
-
-.subsection p{
-  color:rgb(0, 21, 112);
-}
-
 li {
   margin-left: 0;
 }

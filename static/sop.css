@@ -1,23 +1,15 @@
-#cekdata, .team, .contacts{
-  margin-top: 0;
+body {
   background-image: url('\wallpaper_cekdata.png');
   width: 1920px;
-  height: 1080px;
+  height: auto;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.sop {
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 40px;
-}
-
-#cekdata {
-  padding-top: 200px;
-}
-
-@media screen and (max-width: 800px) {
-  #cekdata, .team {
-    width: auto;
-    height: 1080px;
-  }
 }
 
 h1 {
