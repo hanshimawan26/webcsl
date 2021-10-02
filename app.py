@@ -950,6 +950,10 @@ def syarat():
 def pendaftaran():
     return render_template('pendaftaran.html')
 
+@app.route('/suporter', methods=['GET'])
+def suporter():
+    return render_template('suporter.html')
+
 @app.route('/contact', methods=['GET'])
 def contact():
     return render_template('contact.html')
