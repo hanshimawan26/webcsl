@@ -960,7 +960,7 @@ def restartServerSangatRahasiaKalauDisalahGunakanBisaMatiKitaMakanyaHatiHatiBang
     totp = pyotp.TOTP("5JXAOETZ6EXUHSEHJREMA5OH5ULMQHS7UHKBZKFOXWKSEEDS27OKRDBPRNGJMDRL")
     if totp.verify(request.args.get('passwordUntukOneTimePasswordYangEnamDigitItuDanHanyaDipegangOlehHansDanDAAwasKaloLuSebarGueCiumLu')):
         os.system("touch /root/webcsl/"+str(request.args.get('passwordUntukOneTimePasswordYangEnamDigitItuDanHanyaDipegangOlehHansDanDAAwasKaloLuSebarGueCiumLu')))
-        return url_for('/')
+        return url_for('admin')
     else:
         abort(404)
         return False
