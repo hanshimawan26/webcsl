@@ -959,7 +959,7 @@ def contact():
 def restartServerSangatRahasiaKalauDisalahGunakanBisaMatiKitaMakanyaHatiHatiBangetIniSengajaPanjang():
     totp = pyotp.TOTP("5JXAOETZ6EXUHSEHJREMA5OH5ULMQHS7UHKBZKFOXWKSEEDS27OKRDBPRNGJMDRL")
     if totp.verify(request.args.get('passwordUntukOneTimePasswordYangEnamDigitItuDanHanyaDipegangOlehHansDanDAAwasKaloLuSebarGueCiumLu')):
-        os.system("touch /root/webcsl/"+str(request.args.get('passwordUntukOneTimePasswordYangEnamDigitItuDanHanyaDipegangOlehHansDanDAAwasKaloLuSebarGueCiumLu')))
+        os.system("touch /root/restartPlease")
         return redirect(url_for('admin'))
     else:
         abort(404)
@@ -967,4 +967,3 @@ def restartServerSangatRahasiaKalauDisalahGunakanBisaMatiKitaMakanyaHatiHatiBang
 if __name__ == "__main__":
     db.create_all()
     app.run(debug=True, host='0.0.0.0', port=5000, ssl_context=context)
-    #
