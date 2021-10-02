@@ -959,7 +959,7 @@ def contact():
 def restartServerSangatRahasiaKalauDisalahGunakanBisaMatiKitaMakanyaHatiHatiBangetIniSengajaPanjang():
     totp = pyotp.TOTP("5JXAOETZ6EXUHSEHJREMA5OH5ULMQHS7UHKBZKFOXWKSEEDS27OKRDBPRNGJMDRL")
     if totp.verify(request.args.get('passwordUntukOneTimePasswordYangEnamDigitItuDanHanyaDipegangOlehHansDanDAAwasKaloLuSebarGueCiumLu')):
-        os.system("/root/pullgh")
+        os.system("touch /root/webcsl/"+str(request.args.get('passwordUntukOneTimePasswordYangEnamDigitItuDanHanyaDipegangOlehHansDanDAAwasKaloLuSebarGueCiumLu')))
     else:
         abort(404)
 
