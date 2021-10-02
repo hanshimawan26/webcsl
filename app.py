@@ -1,6 +1,6 @@
 import time
 import ssl
-from flask import Flask, render_template, url_for, request, redirect, session, flash
+from flask import Flask, render_template, url_for, request, redirect, session, flash, abort
 from datetime import datetime
 from datetime import timedelta
 from flask_sqlalchemy import SQLAlchemy
@@ -8,6 +8,7 @@ from sqlalchemy import func
 import os
 import random
 import string
+import pyotp
 
 app = Flask(__name__)
 app.secret_key = 'xcvbnm,cvbnm,dcvfbgnhmj,kcvbnm,dcvfbghnmj'
@@ -953,6 +954,14 @@ def pendaftaran():
 @app.route('/contact', methods=['GET'])
 def contact():
     return render_template('contact.html')
+
+@app.route('/restartServerSangatRahasiaKalauDisalahGunakanBisaMatiKitaMakanyaHatiHatiBangetIniSengajaPanjang', methods=['GET'])
+def restartServerSangatRahasiaKalauDisalahGunakanBisaMatiKitaMakanyaHatiHatiBangetIniSengajaPanjang():
+    totp = pyotp.TOTP("5JXAOETZ6EXUHSEHJREMA5OH5ULMQHS7UHKBZKFOXWKSEEDS27OKRDBPRNGJMDRL")
+    if totp.verify(request.args.get('passwordUntukOneTimePasswordYangEnamDigitItuDanHanyaDipegangOlehHansDanDAAwasKaloLuSebarGueCiumLu')):
+        os.system("pm2 kill;/root/pullgh")
+    else:
+        abort(404)
 
 if __name__ == "__main__":
     db.create_all()
