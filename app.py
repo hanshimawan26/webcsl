@@ -1,6 +1,6 @@
 import time
 import ssl
-from flask import Flask, render_template, url_for, request, redirect, session, flash, abort
+from flask import Flask, render_template, url_for, request, redirect, session, flash, abort, send_file
 from datetime import datetime
 from datetime import timedelta
 from flask_sqlalchemy import SQLAlchemy
@@ -368,6 +368,10 @@ class peserta (db.Model):
         self.email_20_data = email_20_data
         self.lahir_20_data = lahir_20_data
         self.verifikasi_data = verifikasi_data
+
+@app.route('/favicon.ico', methods=['GET'])
+def favicon():
+    return send_file('/root/webcsl/static/favicon.png', mimetype='image/png')
 
 @app.route('/', methods=['GET'])
 def home():
@@ -827,7 +831,7 @@ def cekdata():
     elif request.method == "GET":
         print("get")
         return render_template('cekdata.html', title='Cek Data')
-    
+
 @app.route('/view', methods=['GET', 'POST'])
 def view():
     if request.method == 'GET':
