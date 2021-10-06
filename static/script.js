@@ -24,7 +24,7 @@ function cslOptions(lomba){
         hideElement("section-lahir"+i.toString());
     }
 
-    for(let i=1; i<=values[lomba]; i++) {
+    /*for(let i=1; i<=values[lomba]; i++) {
         document.getElementById("nama"+i.toString()).setAttribute("required","");
         document.getElementById("telpon"+i.toString()).setAttribute("required","");
         document.getElementById("email"+i.toString()).setAttribute("required","");
@@ -36,7 +36,7 @@ function cslOptions(lomba){
         document.getElementById("telpon"+i.toString()).removeAttribute("required");
         document.getElementById("email"+i.toString()).removeAttribute("required");
         document.getElementById("lahir"+i.toString()).removeAttribute("required");
-    }
+    }*/
 }
 var countDownDate = new Date("Oct 11, 2021 16:00:00").getTime();
   var x = setInterval(function() {
