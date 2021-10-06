@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!-- 
 kepo kan sama source code kita, bikin sendiri kok.
@@ -8,15 +9,16 @@ jangan lupa follow ig kita ya :)
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.canisiussuperleague.id/static/style2.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nova+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.canisiussuperleague.id/static/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.canisiussuperleague.id/static/daftar.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.canisiussuperleague.id/static/navbar.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.canisiussuperleague.id/static/slideshow.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.canisiussuperleague.id/static/countdown.css">
-    <link rel="shortcut icon" href="https://cdn.canisiussuperleague.id/favicon.ico">
+    <title>Pendaftaran - Canisius Super League</title>
+    <link rel="icon" type="image" href="https://cdn.canisiussuperleague.id/static/favicon.png"/>
    <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-209128624-1">
 </script>
@@ -27,27 +29,17 @@ jangan lupa follow ig kita ya :)
 
   gtag('config', 'UA-209128624-1');
 </script>
-    <title>{% block title %} {% endblock title %}</title>
-    <link rel="icon" type="image" href="https://cdn.canisiussuperleague.id/static/favicon.png"/>
-    <script>
-      const mainMenu = document.querySelector('.mainMenu');
-const closeMenu = document.querySelector('.closeMenu');
-const openMenu = document.querySelector('.openMenu');
-
-openMenu.addEventListener('click',show);
-closeMenu.addEventListener('click',close);
-
-function show(){
-    mainMenu.style.display = 'flex';
-    mainMenu.style.top = '0';
-}
-function close(){
-    mainMenu.style.top = '-100%';
-}
-    </script>
-{% block head %}
-{% endblock head %}
+    <style>
+      .peserta {
+        margin-top: 5vh;
+      }
+      body {
+        background-image: None;
+        background-color: #4CA6C6;
+      }
+    </style>
   </head>
+
   <body>
     <nav class="navbar">
       <a href="#" class="nav-logo">
@@ -60,28 +52,728 @@ function close(){
       </a>
       <div class="navbar-links">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/pendaftaran">SOP Pendaftaran</a></li>
-          <li><a href="/pendaf">Daftar</a></li>
-          <li><a href="/syarat">Lomba</a></li>
-          <li><a href="/cekdata">Cek Data</a></li>
-          <li><a href="/suporter">Supporter</a></li>
-          <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/pendaftaran">SOP Pendaftaran</a></li>
+            <li><a href="/pendaf">Daftar</a></li>
+            <li><a href="/syarat">Lomba</a></li>
+            <li><a href="/cekdata">Cek Data</a></li>
+            <li><a href="/suporter">Supporter</a></li>
+            <li><a href="/contact">Contact Us</a></li>
         </ul>
       </div>
     </nav>
     <section id="overlay">
-      <section id="content">
-        {% block content %}
-        {% endblock %}
-        <br>
-        <section class="footer">
-          <a href="/team">Meet the Web Development Team</a>
+      <section id="top"></section>
+      <section id="head">
+        <h1>Pendaftaran Lomba</h1>
+       <h2>Pendaftaran akan ditutup pada 10 Oktober 2021, 12:00 WIB</h2>
+        <h2>Sebelum mendaftar, mohon membaca <a href="/pendaftaran" target="_blank">SOP Pendaftaran</a> dan <a href="/syarat">SOP Lomba</a> terlebih dahulu</h2>
+        <h2><a href="https://youtu.be/zYpE_B1JUio" target="_blank">Video Tutorial Pendaftaran</a></h2>
+      </section>
+      <form action="/pendaf" method="POST" enctype="multipart/form-data">
+        <section class="sekolah">
+          <label for="sekolah">Sekolah</label> <br>
+          <input type="text" name="sekolah" id="sekolah" required>
         </section>
+
+        <section class="namakelompok">
+          <label for="tim">Tim     : </label><br>
+          <select id="tim" name="user" required>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+        </section>
+
+        <section class="suratketerangan">
+         <label for="surat">Link Folder Drive</label> <br><p>Catatan: Kalau Bapak/Ibu kesulitan dalam melengkapi berkas, surat kepala sekolah ataupun berkas seperti biaya pendaftaran bisa menyusul</p>
+          <input type="url" name="surat" id="surat" required>
+        </section>
+
+        <section class="cabang">
+          <br>
+          <span>Cabang Lomba yang Ingin Diikuti?</span>
+          <br>
+          <table>
+            <td>
+              {% if sisacatur != 0 %}
+              <section class="option">
+              <input type="radio" name="cabang" id="chess" value="chess" class="radio" onclick="cslOptions('chess');">
+              <label for="chess">Chess League</label>
+              </section>
+              {% endif %}
+              {% if sisabasketputra != 0 %}
+              <section class="option">
+              <input type="radio" name="cabang" id="basketputra" value="basketputra" class="radio" onclick="cslOptions('basketputra');">
+              <label for="basketputra">Basket Skills Putra</label>
+              </section>
+              {% endif %}
+              {% if sisabasketputri != 0 %}
+              <section class="option">
+              <input type="radio" name="cabang" id="basketputri" value="basketputri" class="radio" onclick="cslOptions('basketputri');">
+              <label for="basketputri">Basket Skills Putri</label>
+              </section>
+              {% endif %}
+              {% if sisadance != 0 %}
+              <section class="option">
+              <input type="radio" name="cabang" id="dance" value="dance" class="radio" onclick="cslOptions('dance');">
+              <label for="dance">Modern Dance</label>
+              </section>
+              {% endif %}
+              {% if sisadebat != 0 %}
+              <section class="option">
+              <input type="radio" name="cabang" id="debat" value="debat" class="radio" onclick="cslOptions('debat');">
+              <label for="debat">English Debate</label>
+              </section>
+              {% endif %}
+              {% if sisaband != 0 %}
+              <section class="option">
+              <input type="radio" name="cabang" id="band" value="band" class="radio" onclick="cslOptions('band');">
+              <label for="band">Band</label>
+              </section>
+              {% endif %}
+              {% if sisapadus != 0 %}
+              <section class="option">
+              <input type="radio" name="cabang" id="padus" value="padus" class="radio" onclick="cslOptions('padus');">
+              <label for="padus">Paduan Suara</label>
+              </section>
+              {% endif %}
+            </td>
+            <td>
+              {% if sisafilm != 0 %}
+              <section class="option">
+              <input type="radio" name="cabang" id="film" value="film" class="radio" onclick="cslOptions('film');">
+              <label for="film">Film Pendek</label>
+              </section>
+              {% endif %}
+              {% if sisapidato != 0 %}
+              <section class="option">
+              <input type="radio" name="cabang" id="pidato" value="pidato" class="radio" onclick="cslOptions('pidato');">
+              <label for="pidato">Pidato</label>
+              </section>
+              {% endif %}
+              {% if sisakosong != 0 %}
+              <section class="option">
+              <input type="radio" name="cabang" id="kosong" value="kosong" class="radio" onclick="cslOptions('kosong');">
+              <label for="kosong">Pencak Silat Putra Seni Tunggal Tangan Kosong</label>
+              </section>
+              {% endif %}
+              {% if sisasenjata != 0 %}
+              <section class="option">
+              <input type="radio" name="cabang" id="bersenjata" value="senjata" class="radio" onclick="cslOptions('senjata');">
+              <label for="senjata">Pencak Silat Putra Seni Tunggal Bersenjata</label>
+              </section>
+              {% endif %}
+              {% if sisaganda != 0 %}
+              <section class="option">
+              <input type="radio" name="cabang" id="ganda" value="ganda" class="radio" onclick="cslOptions('ganda');">
+              <label for="ganda">Pencak Silat Putra Seni Ganda Tangan Kosong</label>
+              </section>
+              {% endif %}
+              {% if sisafoto != 0 %}
+              <section class="option">
+              <input type="radio" name="cabang" id="foto" value="foto" class="radio" onclick="cslOptions('foto');">
+              <label for="foto">Fotografi</label>
+              </section>
+              {% endif %}
+              {% if sisadesign != 0 %}
+              <section class="option">
+              <input type="radio" name="cabang" id="design" value="design" class="radio" onclick="cslOptions('design');">
+              <label for="design">Seaside Design</label>
+              </section>
+              {% endif %}
+            </td>
+          </table>
+        </section>
+        <section class="peserta">
+        <section class="nama1" id="section-nama1">
+          <label for="nama1">Nama Peserta 1</label>
+          <br>
+          <input type="text" name="nama_1" id="nama1" pattern="^[A-Za-z ,.'-]+$" required>
+        </section>
+
+        <section class="telpon1" id="section-telepon1">
+        <label for="telpon1">Nomor Telepon (menggunakan 62, contoh: <a href="https://wa.me/6281388577885">6281388577885</a>)</label>
+        <br>
+        <input type="text" name="telpon_1" id="telpon1" pattern="628[0-9]{8,11}" required>
+        </section>
+
+
+        <section class="email1" id="section-email1">
+        <label for="email1">Email</label>
+        <br>
+        <input type="email" name="email_1" id="email1" required>
+        </section>
+
+
+        <section class="lahir1" id="section-lahir1">
+        <label for="lahir1">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_1" id="lahir1" required>
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama2" id="section-nama2">
+          <label for="nama2">Nama Peserta 2</label>
+          <br>
+          <input type="text" name="nama_2" id="nama2" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon2" id="section-telepon2">
+        <label for="telpon2">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_2" id="telpon2" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email2" id="section-email2">
+        <label for="email2">Email</label>
+        <br>
+        <input type="email" name="email_2" id="email2" >
+        </section>
+
+
+        <section class="lahir2" id="section-lahir2">
+        <label for="lahir2">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_2" id="lahir2" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama3" id="section-nama3">
+          <label for="nama3">Nama Peserta 3</label>
+          <br>
+          <input type="text" name="nama_3" id="nama3" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon3" id="section-telepon3">
+        <label for="telpon3">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_3" id="telpon3" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email3" id="section-email3">
+        <label for="email3">Email</label>
+        <br>
+        <input type="email" name="email_3" id="email3" >
+        </section>
+
+
+        <section class="lahir3" id="section-lahir3">
+        <label for="lahir3">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_3" id="lahir3" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama4" id="section-nama4" >
+          <label for="nama4">Nama Peserta 4</label>
+          <br>
+          <input type="text" name="nama_4" id="nama4" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon4" id="section-telepon4">
+        <label for="telpon4">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_4" id="telpon4" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email4" id="section-email4">
+        <label for="email4">Email</label>
+        <br>
+        <input type="email" name="email_4" id="email4" >
+        </section>
+
+
+        <section class="lahir4" id="section-lahir4">
+        <label for="lahir4">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_4" id="lahir4" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama5" id="section-nama5" >
+          <label for="nama5">Nama Peserta 5</label>
+          <br>
+          <input type="text" name="nama_5" id="nama5" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon5" id="section-telepon5">
+        <label for="telpon5">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_5" id="telpon5" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email5" id="section-email5">
+        <label for="email5">Email</label>
+        <br>
+        <input type="email" name="email_5" id="email5" >
+        </section>
+
+
+        <section class="lahir5" id="section-lahir5">
+        <label for="lahir5">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_5" id="lahir5" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama6" id="section-nama6" >
+          <label for="nama6">Nama Peserta 6</label>
+          <br>
+          <input type="text" name="nama_6" id="nama6" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon6" id="section-telepon6">
+        <label for="telpon6">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_6" id="telpon6" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email6" id="section-email6">
+        <label for="email6">Email</label>
+        <br>
+        <input type="email" name="email_6" id="email6" >
+        </section>
+
+
+        <section class="lahir6" id="section-lahir6">
+        <label for="lahir6">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_6" id="lahir6" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama7" id="section-nama7" >
+          <label for="nama7">Nama Peserta 7</label>
+          <br>
+          <input type="text" name="nama_7" id="nama7" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon7" id="section-telepon7">
+        <label for="telpon7">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_7" id="telpon7" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email7" id="section-email7">
+        <label for="email7">Email</label>
+        <br>
+        <input type="email" name="email_7" id="email7" >
+        </section>
+
+
+        <section class="lahir7" id="section-lahir7">
+        <label for="lahir7">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_7" id="lahir7" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama8" id="section-nama8" >
+          <label for="nama8">Nama Peserta 8</label>
+          <br>
+          <input type="text" name="nama_8" id="nama8" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon8" id="section-telepon8">
+        <label for="telpon8">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_8" id="telpon8" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email8" id="section-email8">
+        <label for="email8">Email</label>
+        <br>
+        <input type="email" name="email_8" id="email8" >
+        </section>
+
+        <section class="lahir8" id="section-lahir8">
+        <label for="lahir8">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_8" id="lahir8" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama9" id="section-nama9" >
+          <label for="nama9">Nama Peserta 9</label>
+          <br>
+          <input type="text" name="nama_9" id="nama9" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon9" id="section-telepon9">
+        <label for="telpon9">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_9" id="telpon9" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email9" id="section-email9">
+        <label for="email9">Email</label>
+        <br>
+        <input type="email" name="email_9" id="email9" >
+        </section>
+
+
+        <section class="lahir9" id="section-lahir9">
+        <label for="lahir9">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_9" id="lahir9" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama10" id="section-nama10" >
+          <label for="nama10">Nama Peserta 10</label>
+          <br>
+          <input type="text" name="nama_10" id="nama10" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon10" id="section-telepon10">
+        <label for="telpon10">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_10" id="telpon10" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email10" id="section-email10">
+        <label for="email10">Email</label>
+        <br>
+        <input type="email" name="email_10" id="email10" >
+        </section>
+
+
+        <section class="lahir10" id="section-lahir10">
+        <label for="lahir10">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_10" id="lahir10" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama11" id="section-nama11" >
+          <label for="nama11">Nama Peserta 11</label>
+          <br>
+          <input type="text" name="nama_11" id="nama11" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon11" id="section-telepon11">
+        <label for="telpon11">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_11" id="telpon11" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email11" id="section-email11">
+        <label for="email11">Email</label>
+        <br>
+        <input type="email" name="email_11" id="email11" >
+        </section>
+
+
+        <section class="lahir11" id="section-lahir11">
+        <label for="lahir11">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_11" id="lahir11" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama12" id="section-nama12" >
+          <label for="nama12">Nama Peserta 12</label>
+          <br>
+          <input type="text" name="nama_12" id="nama12" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon12" id="section-telepon12">
+        <label for="telpon12">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_12" id="telpon12" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email12" id="section-email12">
+        <label for="email12">Email</label>
+        <br>
+        <input type="email" name="email_12" id="email12" >
+        </section>
+
+
+        <section class="lahir12" id="section-lahir12">
+        <label for="lahir12">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_12" id="lahir12" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama13" id="section-nama13" >
+          <label for="nama13">Nama Peserta 13</label>
+          <br>
+          <input type="text" name="nama_13" id="nama13" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon13" id="section-telepon13">
+        <label for="telpon13">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_13" id="telpon13" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email13" id="section-email13">
+        <label for="email13">Email</label>
+        <br>
+        <input type="email" name="email_13" id="email13" >
+        </section>
+
+
+        <section class="lahir13" id="section-lahir13">
+        <label for="lahir13">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_13" id="lahir13" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama14" id="section-nama14" >
+          <label for="nama14">Nama Peserta 14</label>
+          <br>
+          <input type="text" name="nama_14" id="nama14" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon14" id="section-telepon14">
+        <label for="telpon14">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_14" id="telpon14" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email14" id="section-email14">
+        <label for="email14">Email</label>
+        <br>
+        <input type="email" name="email_14" id="email14" >
+        </section>
+
+
+        <section class="lahir14" id="section-lahir14">
+        <label for="lahir14">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_14" id="lahir14" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama15" id="section-nama15" >
+          <label for="nama15">Nama Peserta 15</label>
+          <br>
+          <input type="text" name="nama_15" id="nama15" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon15" id="section-telepon15">
+        <label for="telpon15">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_15" id="telpon15" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email15" id="section-email15">
+        <label for="email15">Email</label>
+        <br>
+        <input type="email" name="email_15" id="email15" >
+        </section>
+
+
+        <section class="lahir15" id="section-lahir15">
+        <label for="lahir15">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_15" id="lahir15" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama16" id="section-nama16" >
+          <label for="nama16">Nama Peserta 16</label>
+          <br>
+          <input type="text" name="nama_16" id="nama16" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon16" id="section-telepon16">
+        <label for="telpon16">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_16" id="telpon16" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email16" id="section-email16">
+        <label for="email16">Email</label>
+        <br>
+        <input type="email" name="email_16" id="email16" >
+        </section>
+
+
+        <section class="lahir16" id="section-lahir16">
+        <label for="lahir16">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_16" id="lahir16" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama17" id="section-nama17" >
+          <label for="nama17">Nama Peserta 17</label>
+          <br>
+          <input type="text" name="nama_17" id="nama17" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon17" id="section-telepon17">
+        <label for="telpon17">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_17" id="telpon17" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email17" id="section-email17">
+        <label for="email17">Email</label>
+        <br>
+        <input type="email" name="email_17" id="email17" >
+        </section>
+
+
+        <section class="lahir17" id="section-lahir17">
+        <label for="lahir17">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_17" id="lahir17" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama18" id="section-nama18" >
+          <label for="nama18">Nama Peserta 18</label>
+          <br>
+          <input type="text" name="nama_18" id="nama18" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon18" id="section-telepon18">
+        <label for="telpon18">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_18" id="telpon18" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email18" id="section-email18">
+        <label for="email18">Email</label>
+        <br>
+        <input type="email" name="email_18" id="email18" >
+        </section>
+
+
+        <section class="lahir18" id="section-lahir18">
+        <label for="lahir18">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_18" id="lahir18" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama19" id="section-nama19" >
+          <label for="nama19">Nama Peserta 19</label>
+          <br>
+          <input type="text" name="nama_19" id="nama19" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon19" id="section-telepon19">
+        <label for="telpon19">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_19" id="telpon19" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email19" id="section-email19">
+        <label for="email19">Email</label>
+        <br>
+        <input type="email" name="email_19" id="email19" >
+        </section>
+
+
+        <section class="lahir19" id="section-lahir19">
+        <label for="lahir19">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_19" id="lahir19" >
+        </section>
+
+        </section>
+        <section class="peserta">
+
+        <section class="nama20" id="section-nama20" >
+        <label for="nama20">Nama Peserta 20</label>
+        <br>
+        <input type="text" name="nama_20" id="nama20" pattern="^[A-Za-z ,.'-]+$">
+        </section>
+
+        <section class="telpon20" id="section-telepon20">
+        <label for="telpon20">Nomor Telepon</label>
+        <br>
+        <input type="text" name="telpon_20" id="telpon20" pattern="628[0-9]{8,11}">
+        </section>
+
+
+        <section class="email20" id="section-email20">
+        <label for="email20">Email</label>
+        <br>
+        <input type="email" name="email_20" id="email20" >
+        </section>
+
+
+        <section class="lahir20" id="section-lahir20">
+        <label for="lahir20">Tanggal Lahir</label>
+        <br>
+        <input type="date" name="lahir_20" id="lahir20" >
+        </section>
+        </section>
+
+        <section class="submission">
+        <h3>Pastikan Semua Data Sudah Benar Sebelum Submit</h3>
+        <br>
+        <input type="submit" id="submit" name = "submit" value="Submit">
+        </section>
+      </form>
+      <section id="bottom">
       </section>
     </section>
+    <script src="https://cdn.canisiussuperleague.id/static/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.canisiussuperleague.id/static/script.js"></script>
 </html>
