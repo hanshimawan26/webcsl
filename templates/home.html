@@ -131,7 +131,6 @@ body {
       <a class="textbutton"href="/syarat"><h4 class="button_link" target="_blank">Halaman Kompetisi (click gambar perlombaan untuk melihat SOP)</h4></a>
     </div>
   </section>
-  <script src="{{ url_for('static', filename='script.js') }}"></script>
   <script>
     var countDownDate = new Date("Oct 11, 2021 16:00:00").getTime();
       var x = setInterval(function() {
@@ -153,12 +152,7 @@ body {
           document.getElementById("Title").style.display = "block";
         }
       }, 0);
-
-    const toggleButton = document.getElementsByClassName('toggle-button')[0]
-    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-
-    toggleButton.addEventListener('click', () => {
-      navbarLinks.classList.toggle('active')
-    })
-  </script>
+</script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+  
 {% endblock %}
