@@ -21,10 +21,53 @@ body {
     margin-top: -450px;
   }
 }
+/* The Modal (background) */
+.modal {
+    display: block;
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 0 5% 0 5%;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 </style>
 {% endblock %}
 {% block title %} Canisius Super League {% endblock %}
 {% block content %}
+  <section id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="static/hadiah.png" style="width:100%">
+    </div>
+  </section>
   <div id="Timer-Section" class="show-on-scroll">
     <h1>The Official Website of Canisius Super League</h1>
     <br>
@@ -65,7 +108,7 @@ body {
   
       <div class="mySlides fade">
         <div class="numbertext">2 / 3</div>
-        <img src="https://cdn.canisiussuperleague.id/static/slide1.png" style="width:100%">
+        <img src="static/juri seaside design.png" style="width:100%">
       </div>
   
       <div class="mySlides fade">
