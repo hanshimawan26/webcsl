@@ -950,6 +950,10 @@ def pendaftaran():
 def suporter():
     return render_template('suporter.html')
 
+@app.route('/pawai', methods=['GET'])
+def pawai():
+    return render_template('pawai.html')
+
 @app.route('/contact', methods=['GET'])
 def contact():
     return render_template('contact.html')
