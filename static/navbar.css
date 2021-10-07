@@ -31,6 +31,12 @@
   max-height: 15vh;
   min-height: 50px;
 }
+.logocc {
+  max-height: 13vh;
+  min-height: 40px;
+  padding-bottom: 1vh;
+  margin-left: 10px;
+}
 
 /*Navbar*/
 

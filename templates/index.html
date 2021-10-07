@@ -16,7 +16,7 @@ jangan lupa follow ig kita ya :)
     <link rel="stylesheet" type="text/css" href="https://cdn.canisiussuperleague.id/static/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.canisiussuperleague.id/static/daftar.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.canisiussuperleague.id/static/navbar.css">
+    <link rel="stylesheet" type="text/css" href="static/navbar.css">
     <title>Pendaftaran - Canisius Super League</title>
     <link rel="icon" type="image" href="https://cdn.canisiussuperleague.id/static/favicon.png"/>
    <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -43,7 +43,8 @@ jangan lupa follow ig kita ya :)
   <body>
     <nav class="navbar">
       <a href="#" class="nav-logo">
-        <img width:100% src="https://cdn.canisiussuperleague.id/static/Artboard%201.png" alt="Logo Canisius Super League" class="logo">
+        <img width:100% src="{{url_for('static', filename='logocc.png')}}" alt="Logo Canisius Super League" class="logocc">
+        <img width:100% src="{{url_for('static', filename='Artboard 1.png')}}" alt="Logo Canisius Super League" class="logo">
       </a>
       <a href="#" class="toggle-button">
         <span class="bar"></span>
@@ -52,12 +53,12 @@ jangan lupa follow ig kita ya :)
       </a>
       <div class="navbar-links">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/pendaftaran">SOP Pendaftaran</a></li>
-            <li><a href="/pendaf">Daftar</a></li>
-            <li><a href="/syarat">Lomba</a></li>
-            <li><a href="/cekdata">Cek Data</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pendaftaran">SOP Pendaftaran</a></li>
+          <li><a href="/pendaf">Daftar</a></li>
+          <li><a href="/syarat">Lomba</a></li>
+          <li><a href="/cekdata">Cek Data</a></li>
+          <li><a href="/contact">Contact Us</a></li>
         </ul>
       </div>
     </nav>
