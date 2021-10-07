@@ -132,4 +132,33 @@ body {
     </div>
   </section>
   <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script>
+    var countDownDate = new Date("Oct 11, 2021 16:00:00").getTime();
+      var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("D").innerHTML = (days<10)? "0" + days : days;
+        document.getElementById("H").innerHTML = (hours<10)? "0" + hours : hours;
+        document.getElementById("M").innerHTML = (minutes<10)? "0" + minutes : minutes;
+        document.getElementById("S").innerHTML = (seconds<10)? "0" + seconds : seconds;
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("Title").innerHTML = "CSL Day "+ Math.abs(days);
+          document.getElementById("Div-Timer").style.display = "none";
+          document.getElementById("Coming-Soon").style.display = "none";
+          document.getElementById("Title").style.display = "block";
+        }
+      }, 0);
+
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+    toggleButton.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active')
+    })
+  </script>
 {% endblock %}
