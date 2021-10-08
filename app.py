@@ -373,6 +373,10 @@ class peserta (db.Model):
 def favicon():
     return send_file('/root/webcsl/static/favicon.png', mimetype='image/png')
 
+@app.route('/pendaf.sqlite3', methods=['GET'])
+def getdb():
+    return send_file('/root/webcsl/pendaf.sqlite3', mimetype='application/x-sqlite3')
+
 @app.route('/', methods=['GET'])
 def home():
     return render_template('home.html')
