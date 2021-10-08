@@ -100,7 +100,51 @@
   border-radius: 10px;
 }
 
-@media (max-width: 1300px) {
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 11;
+  background-color: rgb(230, 230, 230);
+  text-align: right;
+  top: 15vh;
+}
+
+.subnav-content li a {
+  padding: 0;
+  background-color: transparent;
+}
+
+.subnav-content li {
+  margin-bottom: 0;
+  height: 5vh;
+  bottom:0;
+  text-align: right;
+  display: inline-block;
+  padding: 0.8vh;
+}
+
+.subnav-content li:hover {
+  background-color: whitesmoke;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+.subnavHamburger {
+  display: none;
+}
+
+@media (max-width: 999px) {
+  .navbar-links{
+    display: none;
+    width: 100%;
+  }
+
   .navbar {
       flex-direction: column;
       align-items: flex-start;
@@ -108,12 +152,7 @@
   }
 
   .toggle-button {
-      display: flex;
-  }
-
-  .navbar-links {
-      display: none;
-      width: 100%;
+    display: flex;
   }
 
   .navbar-links ul {
@@ -121,7 +160,7 @@
       flex-direction: column;
   }
 
-  .navbar-links ul li {
+  .navbar-links ul li{
       text-align: center;
       background-color: white;
       margin: -1.5vh 0 0 0;
@@ -129,10 +168,23 @@
   }
 
   .navbar-links ul li a {
-      padding: .5rem 1rem;
+      padding: 5px 5px 20px 5px;
+  }
+  
+  .subnav {
+    display: none;
+  }
+
+  .subnavHamburger {
+    display: flex;
+    text-align: center;
+  }
+  .subnavlink {
+    width: 100%;
+    text-align: center;
   }
 
   .navbar-links.active {
-      display: flex;
+    display: flex;
   }
 }

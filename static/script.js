@@ -54,13 +54,6 @@ function showSlides() {
   setTimeout(showSlides, 10000); // Change image every 5 seconds
 }
 
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-
-    toggleButton.addEventListener('click', () => {
-      navbarLinks.classList.toggle('active')
-    })
-
 // Detect request animation frame
 var scroll = window.requestAnimationFrame ||
              // IE Fallback
@@ -123,4 +116,9 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+
+var navbar = document.getElementById("navbar-links");
+function openNav() {
+  navbar.style.display = "flex";
 }

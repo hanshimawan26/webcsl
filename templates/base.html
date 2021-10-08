@@ -28,41 +28,18 @@ jangan lupa follow ig kita ya :)
     margin-left: 10px;
   }
 </style>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-209128624-1');
-</script>
-    <title>{% block title %} {% endblock title %}</title>
-    <link rel="icon" type="image" href="static\favicon.png"/>
-    <script>
-      const mainMenu = document.querySelector('.mainMenu');
-const closeMenu = document.querySelector('.closeMenu');
-const openMenu = document.querySelector('.openMenu');
-
-openMenu.addEventListener('click',show);
-closeMenu.addEventListener('click',close);
-
-function show(){
-    mainMenu.style.display = 'flex';
-    mainMenu.style.top = '0';
-}
-function close(){
-    mainMenu.style.top = '-100%';
-}
-    </script>
+<title>{% block title %} {% endblock title %}</title>
+<link rel="icon" type="image" href="static\favicon.png"/>
 {% block head %}
 {% endblock head %}
   </head>
   <body>
     <nav class="navbar">
-      <a href="#" class="nav-logo">
-        <img width:100% src="{{url_for('static', filename='logocc.png')}}" alt="Logo Canisius Super League" class="logocc">
+      <a href="/" class="nav-logo">
         <img width:100% src="{{url_for('static', filename='Artboard 1.png')}}" alt="Logo Canisius Super League" class="logo">
+        <img width:100% src="{{url_for('static', filename='logocc.png')}}" alt="Logo Canisius Super League" class="logocc">
       </a>
-      <a href="#" class="toggle-button">
+      <a href="#" class="toggle-button"> 
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -73,10 +50,18 @@ function close(){
           <li><a href="/about">About</a></li>
           <li><a href="/pendaftaran">SOP Pendaftaran</a></li>
           <li><a href="/pendaf">Daftar</a></li>
-          <li><a href="/syarat">Lomba</a></li>
           <li><a href="/cekdata">Cek Data</a></li>
-          <li><a href="/suporter">Supporter</a></li>
-          <li><a href="/pawai">Pawai</a></li>
+          <div class="subnav">
+            <li><a class="subnavbtn">SOP</a></li>
+            <div class="subnav-content">
+              <li><a href="/syarat">SOP Lomba</a></li>
+              <li><a href="/suporter">SOP Suporter</a></li>
+              <li><a href="/pawai">SOP Pawai Virtual</a></li>
+            </div>
+          </div>
+          <li class="subnavHamburger"><a href="/syarat" class="subnavlink">SOP Lomba</a></li>
+          <li class="subnavHamburger"><a href="/suporter" class="subnavlink">SOP Suporter</a></li>
+          <li class="subnavHamburger"><a href="/pawai" class="subnavlink">SOP Pawai Virtual</a></li>
           <li><a href="/contact">Contact Us</a></li>
         </ul>
       </div>
@@ -94,4 +79,17 @@ function close(){
   </body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-209128624-1');
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+      const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+  
+      toggleButton.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active')
+      })
+  </script>
 </html>
