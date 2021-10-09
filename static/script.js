@@ -23,20 +23,6 @@ function cslOptions(lomba){
         hideElement("section-email"+i.toString());
         hideElement("section-lahir"+i.toString());
     }
-
-    /*for(let i=1; i<=values[lomba]; i++) {
-        document.getElementById("nama"+i.toString()).setAttribute("required","");
-        document.getElementById("telpon"+i.toString()).setAttribute("required","");
-        document.getElementById("email"+i.toString()).setAttribute("required","");
-        document.getElementById("lahir"+i.toString()).setAttribute("required","");
-    }
-
-    for(let i=values[lomba]+1; i<=20; i++) {
-        document.getElementById("nama"+i.toString()).removeAttribute("required");
-        document.getElementById("telpon"+i.toString()).removeAttribute("required");
-        document.getElementById("email"+i.toString()).removeAttribute("required");
-        document.getElementById("lahir"+i.toString()).removeAttribute("required");
-    }*/
 }
 
 var slideIndex = 0;
