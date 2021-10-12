@@ -795,7 +795,7 @@ def index():
         print(catur_sisa)
 
         totalsisa = catur_sisa+film_sisa+basketputra_sisa+basketputri_sisa+band_sisa+dance_sisa+foto_sisa+debat_sisa+pidato_sisa+kosong_sisa+senjata_sisa+ganda_sisa+padus_sisa+design_sisa
-        if request.args.get('password') == 'darrenalexandergantengsekali':
+        if request.args.get('password') == 'smpreginapacisbogor':
             return render_template('index.html', title='Pendaftaran', sisacatur = catur_sisa, sisafilm = film_sisa, sisabasketputra = basketputra_sisa, sisabasketputri = basketputri_sisa, sisaband = band_sisa, sisadance = dance_sisa, sisafoto = foto_sisa, sisadebat= debat_sisa, sisapidato = pidato_sisa, sisakosong = kosong_sisa, sisasenjata = senjata_sisa, sisaganda = ganda_sisa, sisapadus = padus_sisa, sisadesign = design_sisa)
         if time.time() < 1633167000:
             return render_template('closed.html')
