@@ -29,18 +29,21 @@ body {
     left: 0;
     top: 0;
     width: 100%; /* Full width */
-    height: 100vh;
+    height: 1080px;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(255, 255, 255, 0);
+    padding-top: 100px;
   }
 
   /* Modal Content/Box */
   .modal-content {
+    height: 500px;
     background-color: #fefefe;
     margin: 0 5% 0 5%;
     padding: 30px;
     border: 1px solid #888;
     width: 90%;
+    text-align: center;
   }
 
   /* The Close Button */
@@ -65,7 +68,9 @@ body {
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
-      <img src="https://cdn.canisiussuperleague.id/static/news.png" style="width:100%">
+      <img src="{{url_for('static', filename='Artboard 1.png')}}" style="height: 200px; padding-top: 50px;">
+      <h2 style="font-size: 50px; color: #112e72;">Nonton Pembukaan Canisius Super League</h2>
+      <a href="https://youtu.be/cQN2I90UvW4" style="color:blue; font-size: 30px; font-family: Roboto;">Click Here</a>
     </div>
   </section>
   <div id="Timer-Section" class="show-on-scroll">
