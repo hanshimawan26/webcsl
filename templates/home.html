@@ -6,21 +6,7 @@ body {
   background-color: #062D70;
   background-image: None;
 }
-@media screen and (max-width: 800px) {
-  #Div-D, #Div-H, #Div-M, #Div-S{
-    margin-left: 0px;
-    padding: 0 30px 0 30px;
-  }
-  #D, #H, #M, #S {
-    font-size: 90px;
-  }
-  #overlay {
-    padding-top: 500px;
-  }
-  #Timer-Section {
-    margin-top: -450px;
-  }
-}
+
 /* The Modal (background) */
 .modal {
     display: block;
@@ -32,18 +18,19 @@ body {
     height: 1080px;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(255, 255, 255, 0);
-    padding-top: 100px;
+    padding-top: 50px;
   }
 
   /* Modal Content/Box */
   .modal-content {
-    height: 500px;
+    height: auto;
     background-color: #fefefe;
-    margin: 0 5% 0 5%;
+    margin: 0 auto 0 auto;
     padding: 30px;
     border: 1px solid #888;
-    width: 90%;
+    width: auto;
     text-align: center;
+    width: 85%;
   }
 
   /* The Close Button */
@@ -60,6 +47,63 @@ body {
     text-decoration: none;
     cursor: pointer;
   }
+  #buy{
+    position: relative;
+    z-index: 5;
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+    float: CENTER;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -520px;
+
+  }
+  #merch {
+    font-style: normal;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Roboto";
+    color: rgb(0, 13, 71);
+  }
+  #merchpost {
+    margin-top: 0px;
+    margin: auto;
+    object-position: center;
+  }
+
+  #phone_buy {
+    display: none;
+  }
+  @media screen and (max-width: 800px) {
+  #Div-D, #Div-H, #Div-M, #Div-S{
+    margin-left: 0px;
+    padding: 0 30px 0 30px;
+  }
+  #D, #H, #M, #S {
+    font-size: 90px;
+  }
+  #overlay {
+    padding-top: 500px;
+  }
+  #Timer-Section{
+    margin-top: -450px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #merchpost {
+    width: 100%;
+  }
+  #phone_buy {
+    margin-top: 0px;
+    display: block;
+  }
+  #buy {
+    display: none;
+  }
+}
 </style>
 {% endblock %}
 {% block title %} Canisius Super League {% endblock %}
@@ -68,14 +112,20 @@ body {
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
-      <img src="{{url_for('static', filename='Artboard 1.png')}}" style="height: 200px; padding-top: 50px;">
-      <h2 style="font-size: 50px; color: #112e72;">Nonton Canisius Super League Day 3</h2>
+      <a href="#"><img src="{{url_for('static', filename='thumbnail day5.png')}}" style="width:100%; padding-top: 0px;"></a>
+      <!-- <h2 style="font-size: 50px; color: #112e72;">Nonton Canisius Super League Day 3</h2>
       <a href="https://www.youtube.com/watch?v=ELw4-aouHnM" style="color:blue; font-size: 30px; font-family: Roboto;">Click Here</a>
+      -->
     </div>
   </section>
+  
   <div id="Timer-Section" class="show-on-scroll">
-    <h1>The Official Website of Canisius Super League</h1>
-    <br>
+    <!-- <h1>The Official Website of Canisius Super League</h1>
+    <br>-->
+    <img src="{{url_for('static', filename='merch.png')}}" style="max-width:1200px;" id="merchpost">
+    <a href="https://www.tokopedia.com/csl-merch?source=universe&st=product" class="button_link" target="_blank" id="buy"><h2 id="merch">Buy Here</h2></a>
+    <a href="https://www.tokopedia.com/csl-merch?source=universe&st=product" class="button_link" target="_blank" id="phone_buy"><h2 id="merch">Buy Here</h2></a>
+    <!--
     <h2 id="Coming-Soon">Coming Soon!</h2>
     <div id="Container-Timer">
       <p id="Title"></p>
@@ -98,8 +148,9 @@ body {
         </div>
       </div>
     </div>
+    -->
   </div>
-  </div>
+  
 
   <section id="slideshow" class="show-on-scroll">
     <div class="slideshow-container">
